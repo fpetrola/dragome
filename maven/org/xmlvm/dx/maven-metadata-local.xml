@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.xmlvm</groupId>
+  <artifactId>dx</artifactId>
+  <version>1</version>
+  <versioning>
+    <versions>
+      <version>1</version>
+    </versions>
+    <lastUpdated>20131222204348</lastUpdated>
+  </versioning>
+</metadata>

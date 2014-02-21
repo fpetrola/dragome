@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.apache.bcel</groupId>
+  <artifactId>bcel</artifactId>
+  <version>5.3-svn</version>
+  <versioning>
+    <versions>
+      <version>5.3-svn</version>
+    </versions>
+    <lastUpdated>20131222203320</lastUpdated>
+  </versioning>
+</metadata>
