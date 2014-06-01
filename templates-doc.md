@@ -36,9 +36,10 @@ Oportunidades:
 4. La arquitectura desacoplada de componentes graficos permite incorporar nuevos entornos visuales aun no contemplados, por ejemplo: Swing, wxWidgets, SWT
 5. Incorporar otros lenguages de JVM como jRuby, Jython, Closure, Groovy, Cobol, usando el bytecode generado.
 5. Incorporar lenguages de .NET para el desarrollo a nivel de lenguaje intermedio.
-6. 
+
 
 Debilidades:
+
 1. Por ser una herramienta nueva no tiene herramientas montadas (componentes adhoc) sobre el SDK
 2. Comunidad de usuarios recien en desarrollo
 3. Beta version
@@ -48,9 +49,10 @@ Debilidades:
 7. No tiene Classloaders
 
 Amenazas:
+
 1. Que el peso del archivo resultante afecte en algunas plataformas, sobre todo las viejas
 2. Que el tiempo de startup sea demasiado largo.
-3. 
+ 
 
 
 ###Dragome architecture
