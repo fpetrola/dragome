@@ -37,7 +37,7 @@ Oportunidades:
 3. Crear capa de compatibilidad para GWT, y incorporar todos los proyectos de GWT sobre el SDK.
 4. La arquitectura desacoplada de componentes graficos permite incorporar nuevos entornos visuales aun no contemplados, por ejemplo: Swing, wxWidgets, SWT
 5. Incorporar otros lenguages de JVM como jRuby, Jython, Closure, Groovy, Cobol, usando el bytecode generado.
-5. Incorporar lenguages de .NET para el desarrollo a nivel de lenguaje intermedio.
+6. Incorporar lenguages de .NET para el desarrollo a nivel de lenguaje intermedio.
 
 
 Debilidades:
