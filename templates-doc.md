@@ -19,14 +19,22 @@ Forma de correr la aplicacion con jetty y tomcat
 
 ###Dragome SWOT (FODA)
 Fortalezas:
-1. Poder desarrollar una aplicacion web client side enteramente en Java.
+
+1. Poder desarrollar una aplicacion web client side enteramente en Java
 2. No se necesitan conocimientos de programacion tipicos de client side: js, HTML, jquery
 3. No se necesita una capacitacion importante para hacer uso del SDK
-4. El proceso de desarrollo y las herramientas provistas por el SDK son independientes del tipo de browser, su version, y tambien del IDE y su version.
+4. El proceso de desarrollo y las herramientas provistas por el SDK son independientes del tipo de browser, su version, y tambien del IDE y su version
+5. La arquitectura permite adaptaciones rapidas a nuevas version del JDK.
 
 Oportunidades:
-1. Las herramientas similares existentes presentan una real complicacion en su instalacion, instalacion de plugins, herramientas de desarrollo especificas, etc que dificultan gravemente la aceptacion del desarrollador. Las cuales presentan problemas graves a la hora de mantenerse vigentes, ya sea actualizando plugins para browser e IDE, debugging. Por lo tanto se desacopla la dependencia con respecto al proveedor de estos componentes. De aca se desprende que va a funcar en cualquier contexto.
-2. 
+
+1. Las herramientas similares existentes presentan una real complicacion en su instalacion, instalacion de plugins, herramientas de desarrollo especificas, etc que dificultan gravemente la aceptacion del desarrollador. Las cuales presentan problemas graves a la hora de mantenerse vigentes, ya sea actualizando plugins para browser e IDE, debugging. 
+2. Se desacopla la dependencia con respecto al proveedor de estos componentes. De aca se desprende que va a funcar en cualquier contexto. Se logra esto mediante el uso de la backward compatibility de los browser y del uso de tecnologias standares de web.
+
+Debilidades:
+1. Por ser una herramienta nueva no tiene herramientas montadas (componentes adhoc) sobre el SDK
+2. Comunidad de usuarios recien en desarrollo
+3. 
 
 
 ###Dragome architecture
