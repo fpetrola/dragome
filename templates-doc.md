@@ -58,7 +58,22 @@ Amenazas:
 
 
 ###Dragome architecture
+
+Hacer grafico con modulos y agregar descripcion de cada uno aca.
+
+Dragome core
+:
+Dragome JRE for JS
+
+Bytecode compiler
+
+
 ###Dragome 4 programmers
+
+Dibujar workflow y explicar partes
+
+
+
 ###Dragome tunning
 
 
