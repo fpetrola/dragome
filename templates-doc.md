@@ -1,5 +1,13 @@
 ###Dragome introduction
+
+
 ###Dragome requirements
+
+Java 7
+Any IDE
+Maven
+Chrome para debuggear
+
 
 ###Dragome maven
 
@@ -87,14 +95,24 @@ Configuraciones:
 4. DragomeConfigurator
 5. Callback evictor config
 6. Configuracion de serializador por servicio
-7. 
 
 
+###Dragome future
+
+1. Multiple threads emulator
+ 1. crear threadpool
+ 2. round robin para threads
+ 3. continuations para pausar
+2. Aplicaciones con continuations
+3. Entornos visuales adicionales:
+ 1. Swing
+ 2. Android
+ 3. WxWidgets
+ 4. WinForms .NET
+4. Hacer andar jRuby, Jython, Closure, etc
+5. Agregar target PHP
 
 
-#hola
-
-dsgsgsdg
 
 
 ```html
