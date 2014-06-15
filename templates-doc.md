@@ -79,6 +79,15 @@ Reuso de componentes.
 
 ###Dragome tunning
 
+Configuraciones:
+
+1. Compilador estricto
+2. Alias a paginas
+3. Implementador de servicio
+4. DragomeConfigurator
+5. Callback evictor config
+6. Configuracion de serializador por servicio
+7. 
 
 
 
