@@ -111,7 +111,10 @@ Configuraciones:
  4. WinForms .NET
 4. Hacer andar jRuby, Jython, Closure, Msil, etc
 5. Agregar target PHP, Asm.js, .NET msi
-6. 
+6. Jit para balanceo en cliente/server.
+7. Que funcione al estilo viejo de web, solo server.
+8. que funque GWT sobre dragome.
+9. 
 
 
 
