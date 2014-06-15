@@ -72,6 +72,9 @@ Bytecode compiler
 
 Dibujar workflow y explicar partes
 
+Reutilizacion de templates.
+Reuso de componentes.
+
 
 
 ###Dragome tunning
