@@ -109,8 +109,10 @@ Configuraciones:
  2. Android
  3. WxWidgets
  4. WinForms .NET
-4. Hacer andar jRuby, Jython, Closure, etc
-5. Agregar target PHP
+4. Hacer andar jRuby, Jython, Closure, Msil, etc
+5. Agregar target PHP, Asm.js, .NET msi
+6. 
+
 
 
 
