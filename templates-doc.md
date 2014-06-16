@@ -3,10 +3,10 @@
 
 ###Dragome requirements
 
-Java 7
-Any IDE
-Maven
-Chrome para debuggear
+* Java 7
+* Any IDE
+* Maven
+* Chrome para debuggear
 
 
 ###Dragome maven
