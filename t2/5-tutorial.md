@@ -39,6 +39,8 @@ new TemplateRepeater<Person>(somePersons, mainTemplate, "row", this::fillTemplat
 ```
 
 Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.
+Template engine will generate a nested sub template for each element using "data-template" attribute. 
+You can use example data inside it to preview template as static HTML pages, it will be removed in template instantiation.
 FillTemplate method will be in charge of creating a component for each person field, binding all data, and creating the delete button.
 
 ``` Java
