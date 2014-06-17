@@ -4,7 +4,7 @@
 Let's create a simple crud using Dragome.
 
 
-We will make use of some tools provided by Dragome SDK: 
+We will make use of some tools provided by the SDK: 
 * service creation
 * visual components
 * model binding
