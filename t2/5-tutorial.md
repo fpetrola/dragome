@@ -17,7 +17,7 @@ public class PersonCrudPage extends DragomeVisualActivity
 ```
 
 
-We will use a service located at server side to execute crud actions such as getPersons and savePersons.⋅⋅
+We will use a service located at server side to execute crud actions such as getPersons and savePersons.  
 A proxy to the service is obtained using a service factory, passing PersonService interface as parameter:
 
 ``` Java
