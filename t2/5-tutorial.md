@@ -3,6 +3,12 @@
 
 Let's create a simple crud using Dragome.
 
+
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> are supported 
+- [x] list syntax is required (any unordered or ordered list supported) 
+- [x] this is a complete item 
+- [ ] this is an incomplete item
+
 We will make use of some tools provided by Dragome SDK: 
 * service creation
 * visual components
