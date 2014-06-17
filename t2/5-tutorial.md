@@ -15,18 +15,13 @@ First of all we create a simple activity for building our page extending Dragome
 ``` Java
 public class PersonCrudPage extends DragomeVisualActivity
 ```
-
-
 We will use a service located at server side to execute crud actions such as getPersons and savePersons.  
 A proxy to the service is obtained using a service factory, passing PersonService interface as parameter:
-
 ``` Java
 PersonService personService= serviceFactory.createSyncService(PersonService.class);
 ```
-
 A HTML template will be used to display each person data.  
 So we need to repeat each subtemplate called "row" and locate all person content there, including the button for deleting the item.
-
 ``` HTML
 <tr data-template="row">
 	<td><span data-template="givenName">Juan</span></td>
@@ -40,12 +35,10 @@ So we need to repeat each subtemplate called "row" and locate all person content
 List<Person> somePersons= personService.getPersons();
 new TemplateRepeater<Person>(somePersons, mainTemplate, "row", this::fillTemplate);
 ```
-
 Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.  
 Template engine will generate a nested sub template for each element using "data-template" attribute.  
 You can use example data inside it to preview template as static HTML pages, it will be removed in template instantiation.  
 FillTemplate method will be in charge of creating a component for each person field, binding all data, and creating the delete button.  
-
 ``` Java
 public void fillTemplate(final Person person, Template itemTemplate)
 {
@@ -63,6 +56,8 @@ public void fillTemplate(final Person person, Template itemTemplate)
 	modelBinder.bindToPanel(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja")));
 }
 ```
+
+
 
 
 
