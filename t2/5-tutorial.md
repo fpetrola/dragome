@@ -4,11 +4,6 @@
 Let's create a simple crud using Dragome.
 
 
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> are supported 
-- [x] list syntax is required (any unordered or ordered list supported) 
-- [x] this is a complete item 
-- [ ] this is an incomplete item
-
 We will make use of some tools provided by Dragome SDK: 
 * service creation
 * visual components
@@ -21,9 +16,10 @@ First of all we create a simple activity for building our page extending Dragome
 public class PersonCrudPage extends DragomeVisualActivity
 ```
 
-We will use a service located at server side to execute crud actions such as getPersons and savePersons.
 
+We will use a service located at server side to execute crud actions such as getPersons and savePersons.
 A proxy to the service is obtained using a service factory, passing PersonService interface as parameter:
+
 ``` Java
 PersonService personService= serviceFactory.createSyncService(PersonService.class);
 ```
