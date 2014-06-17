@@ -61,7 +61,7 @@ As rowPanel is constructed using row template, each component will be placed at 
 Finally we create buttons for saving and adding new persons to the list.
 
 
-**Ready!!**
+__Ready!!__
 
 This is the final source code for this person CRUD:
 ``` Java
