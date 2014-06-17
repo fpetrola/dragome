@@ -22,7 +22,7 @@ PersonService personService= serviceFactory.createSyncService(PersonService.clas
 ```
 A HTML template will be used to display each person data.  
 So we need to repeat each subtemplate called "row" and locate all person content there, including the button for deleting the item.
-Template engine will generate a nested sub template for each element using "data-template" attribute, you can use example data inside it to preview template as static HTML pages, it will be removed in template instantiation.  
+Template engine will generate a nested sub template for each element using "data-template" attribute, you can use example data inside it to preview template as static HTML pages, it will be removed in template instantiation. For more info: [Template Engine](template-engine.md) 
 ``` HTML
 <tr data-template="row">
 	<td><span data-template="givenName">Juan</span></td>
