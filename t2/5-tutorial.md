@@ -27,7 +27,41 @@ PersonService personService= serviceFactory.createSyncService(PersonService.clas
 
 
 ``` Java
-new TemplateRepeater<Person>(somePersons, mainTemplate, "row", this::fillTemplate);
+public class PersonCrudPage extends DragomeVisualActivity
+{
+	PersonService personService= serviceFactory.createSyncService(PersonService.class);
+	List<Person> persons= new ArrayList<Person>();
+
+	public void build()
+	{
+		mainPanel.addChild(new VisualButtonImpl("save-button", v -> personService.savePersons(persons)));
+		mainPanel.addChild(new VisualButtonImpl("add-button", v -> showPersons(Arrays.asList(new Person()))));
+
+		showPersons(personService.getPersons());
+	}
+
+	private void showPersons(final List<Person> somePersons)
+	{
+		persons.addAll(somePersons);
+		new TemplateRepeater<Person>(somePersons, mainTemplate, "row", this::fillTemplate);
+	}
+
+	public void fillTemplate(final Person person, Template itemTemplate)
+	{
+		final VisualPanel rowPanel= new VisualPanelImpl(itemTemplate);
+		mainPanel.addChild(rowPanel);
+
+		rowPanel.addChild(new VisualButtonImpl("delete-button", v -> {
+			persons.remove(person);
+			rowPanel.getParent().removeChild(rowPanel);
+		}));
+
+		ModelBinder<Person> modelBinder= new ModelBinder<Person>(person, rowPanel);
+		modelBinder.bindToPanel(new VisualTextFieldImpl<String>("givenName"));
+		modelBinder.bindToPanel(new VisualTextFieldImpl<String>("surname"));
+		modelBinder.bindToPanel(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja")));
+	}
+}
 ```
 
 
