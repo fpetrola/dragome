@@ -8,8 +8,8 @@ Let's define a HTML template for with two placeholders:
 ``` HTML
 <html>
 <body>
-				<span data-template="first">Name</span>
-				<span data-template="second">Lastname</span>
+	<span data-template="first">Name</span>
+	<span data-template="second">Lastname</span>
 </body>
 
 </html>
