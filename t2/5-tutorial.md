@@ -15,3 +15,13 @@ First of all we create a simple activity for building our page extending Dragome
 ``` Java
 public class PersonCrudPage extends DragomeVisualActivity
 ```
+
+We create a proxy to PersonService using SyncServices.createService
+
+``` Java
+PersonService personService= SyncServices.createService(PersonService.class);
+List<Person> persons= personService.getPersons();	
+```
+
+
+
