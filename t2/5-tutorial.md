@@ -13,7 +13,5 @@ We will make use of some tools provided by Dragome SDK:
 First of all we create a simple activity for building our page extending DragomeVisualActivity.
 
 ``` Java
-
 public class PersonCrudPage extends DragomeVisualActivity
-
 ```
