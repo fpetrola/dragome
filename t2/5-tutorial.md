@@ -26,14 +26,10 @@ So we need to repeat each subtemplate called "row" and locate all person content
 
 ``` HTML
 <tr data-template="row">
-	<td class="span2"><span data-template="givenName">Juan</span></td>
-	<td class="span2"><span data-template="surname">Perez</span></td>
-	<td class="span2"><span data-template="nickname">JP</span></td>
-	<td class="span2">
-		<button type="submit" class="btn btn-primary" data-template="delete-button">
-			<i class="icon-remove icon-white"></i> delete
-		</button>
-	</td>
+	<td><span data-template="givenName">Juan</span></td>
+	<td><span data-template="surname">Perez</span></td>
+	<td><span data-template="nickname">JP</span></td>
+	<td><button data-template="delete-button">delete</button></td>
 </tr>
 ```
 
