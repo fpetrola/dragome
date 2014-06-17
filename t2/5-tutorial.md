@@ -25,14 +25,17 @@ A HTML template will be used to display each person data.
 So we need to repeat each subtemplate called "row" and locate all person content there, including the button for deleting the item.
 
 ``` HTML
-<tr class="to-be-removed" data-template="row">
+<tr data-template="row">
 	<td class="span2"><span data-template="givenName">Juan</span></td>
 	<td class="span2"><span data-template="surname">Perez</span></td>
 	<td class="span2"><span data-template="nickname">JP</span></td>
-	...
+	<td class="span2">
+		<button type="submit" class="btn btn-primary" data-template="delete-button">
+			<i class="icon-remove icon-white"></i> delete
+		</button>
+	</td>
 </tr>
 ```
-
 
 ``` Java
 List<Person> somePersons= personService.getPersons();
