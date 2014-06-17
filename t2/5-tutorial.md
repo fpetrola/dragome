@@ -56,11 +56,12 @@ public void fillTemplate(final Person person, Template itemTemplate)
 	modelBinder.bindToPanel(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja")));
 }
 ```
+ModelBinder will bind each component to person field that shares the same name, and will add each component to rowPanel.  
+As rowPanel is constructed using row template, each component will be placed at the corresponding placeholder with the same name.
 
+Finally we create buttons for saving and adding new persons to the list.
 
-
-
-
+And this is the final source code for a person CRUD:
 ``` Java
 public class PersonCrudPage extends DragomeVisualActivity
 {
