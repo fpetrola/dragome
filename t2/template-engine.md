@@ -13,13 +13,13 @@ For each element containing data-template attribute, template engine will be cre
 </body>
 </html>
 ```
-With this Template Engine will create a Template instance with name "parent", containing two children that are also instances of Template called "first-child" and "second-child":
+With this HTML, Template Engine will create a Template instance with name "parent", containing two children that are also instances of Template called "first-child" and "second-child":
 ``` Java
 Template parent= getTemplate("parent");
 Template firstChild= parent.getChild("first-child");
 Template secondChild= parent.getChild("second-child");
 ```
-In HTML templates "Template.getContent" method will return this associated element, the one marked with "data-template" attribute.
+In HTML templates, "Template.getContent" method will return this associated element, the one marked with "data-template" attribute.
 Dragome use standard W3C objects to represent all HTML related stuff.
 ``` Java
 org.w3c.dom.Element element= parent.getContent();
