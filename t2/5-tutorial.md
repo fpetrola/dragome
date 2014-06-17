@@ -60,7 +60,9 @@ As rowPanel is constructed using row template, each component will be placed at 
 
 Finally we create buttons for saving and adding new persons to the list.
 
-And this is the final source code for a person CRUD:
+Ready!!
+
+This is the final source code for this person CRUD:
 ``` Java
 public class PersonCrudPage extends DragomeVisualActivity
 {
@@ -98,6 +100,42 @@ public class PersonCrudPage extends DragomeVisualActivity
 	}
 }
 ```
+
+And this is the complete HTML template:
+``` HTML
+<html>
+<head>
+<script type="text/javascript" src="dragome/dragome.js"></script>
+</head>
+
+<body>
+	<h2>List of persons</h2>
+	<button data-template="add-button"></button>
+	<button data-template="save-button"></button>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Last name</th>
+				<th>Nickname</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-template="row">
+				<td><span data-template="givenName">Juan</span></td>
+				<td><span data-template="surname">Perez</span></td>
+				<td><span data-template="nickname">JP</span></td>
+				<td><button data-template="delete-button">delete</button></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
+```
+
+
 
 
 
