@@ -34,18 +34,21 @@ Note that mainTemplate is provided as member of DragomeVisualActivity which cont
 FillTemplate method will be in charge of creating a component for each person field, binding all data, and creating the delete button.
 
 ``` Java
-final VisualPanel rowPanel= new VisualPanelImpl(itemTemplate);
-mainPanel.addChild(rowPanel);
-
-rowPanel.addChild(new VisualButtonImpl("delete-button", v -> {
-	persons.remove(person);
-	rowPanel.getParent().removeChild(rowPanel);
-}));
-
-ModelBinder<Person> modelBinder= new ModelBinder<Person>(person, rowPanel);
-modelBinder.bindToPanel(new VisualTextFieldImpl<String>("givenName"));
-modelBinder.bindToPanel(new VisualTextFieldImpl<String>("surname"));
-modelBinder.bindToPanel(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja")));
+public void fillTemplate(final Person person, Template itemTemplate)
+{
+	final VisualPanel rowPanel= new VisualPanelImpl(itemTemplate);
+	mainPanel.addChild(rowPanel);
+	
+	rowPanel.addChild(new VisualButtonImpl("delete-button", v -> {
+		persons.remove(person);
+		rowPanel.getParent().removeChild(rowPanel);
+	}));
+	
+	ModelBinder<Person> modelBinder= new ModelBinder<Person>(person, rowPanel);
+	modelBinder.bindToPanel(new VisualTextFieldImpl<String>("givenName"));
+	modelBinder.bindToPanel(new VisualTextFieldImpl<String>("surname"));
+	modelBinder.bindToPanel(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja")));
+}
 ```
 
 
