@@ -15,15 +15,39 @@ First of all we create a simple activity for building our page extending Dragome
 public class PersonCrudPage extends DragomeVisualActivity
 ```
 
-A proxy to the service is obtained using a service factory, passing PersonService interface:
+We will use a service located at server side to execute crud actions such as getPersons and savePersons.
+A proxy to the service is obtained using a service factory, passing PersonService interface as parameter:
 ``` Java
 PersonService personService= serviceFactory.createSyncService(PersonService.class);
 ```
 
-A proxy to the service is obtained using a service factory, passing PersonService interface:
+A HTML template will be used to display each person data. 
+So we need to repeat each subtemplate called "row" and locate all person content there, including the button for deleting the item.
+
+
 ``` Java
-PersonService personService= serviceFactory.createSyncService(PersonService.class);
+List<Person> somePersons= personService.getPersons();
+new TemplateRepeater<Person>(somePersons, mainTemplate, "row", this::fillTemplate);
 ```
+
+Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.
+FillTemplate method will be in charge of creating a component for each person field, binding all data, and creating the delete button.
+
+``` Java
+final VisualPanel rowPanel= new VisualPanelImpl(itemTemplate);
+mainPanel.addChild(rowPanel);
+
+rowPanel.addChild(new VisualButtonImpl("delete-button", v -> {
+	persons.remove(person);
+	rowPanel.getParent().removeChild(rowPanel);
+}));
+
+ModelBinder<Person> modelBinder= new ModelBinder<Person>(person, rowPanel);
+modelBinder.bindToPanel(new VisualTextFieldImpl<String>("givenName"));
+modelBinder.bindToPanel(new VisualTextFieldImpl<String>("surname"));
+modelBinder.bindToPanel(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja")));
+```
+
 
 
 ``` Java
