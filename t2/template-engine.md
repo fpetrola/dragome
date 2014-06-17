@@ -11,6 +11,5 @@ Let's define a HTML template for with two placeholders:
 	<span data-template="first">Name</span>
 	<span data-template="second">Lastname</span>
 </body>
-
 </html>
 ```
