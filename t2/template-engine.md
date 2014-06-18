@@ -1,6 +1,6 @@
 #Template Engine
-HTML templates are based in pure HTML files, also they are logicless.  
-It is not required to be XHTML o well formed HTML, any HTML will work if it can be parsed by a browser.  
+HTML templates are based in pure HTML files.  
+They are logicless, and they are not required to be XHTML or well formed HTML, any HTML will work if it can be parsed by a browser.  
 Also no special tags are required, and sub templates (placeholders) are identified using custom data attribute "data-template" which is a standard mechanism.  
 
 The idea behind this template aproach is to completely separate both worlds: graphic design and developers world. This decoupled mechanism allows us to get significant productivity improvements.
