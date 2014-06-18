@@ -17,8 +17,8 @@ This is how it works: for each element containing data-template attribute, templ
 ``` HTML
 <html>
 <body>
-	<table>
-		<tr data-template="parent">
+	<table data-template="parent">
+		<tr>
 			<td data-template="first-child">first</td>
 			<td data-template="second-child">first</td>
 		</tr>
@@ -37,6 +37,6 @@ For that, "Template.getContent" method will return this associated element, the 
 Dragome use standard W3C objects to represent all HTML related stuff.
 ``` Java
 org.w3c.dom.Element element= parent.getContent();
-element.setAttribute("class", "selected");
+element.setAttribute("class", "bordered-table");
 ```
 
