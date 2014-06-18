@@ -17,10 +17,12 @@ This is how it works: for each element containing data-template attribute, templ
 ``` HTML
 <html>
 <body>
-	<div data-template="parent">
-		<span data-template="first-child">first</span>
-		<span data-template="second-child">first</span>
-	</div>
+	<table>
+		<tr data-template="parent">
+			<td data-template="first-child">first</td>
+			<td data-template="second-child">first</td>
+		</tr>
+	</table>
 </body>
 </html>
 ```
