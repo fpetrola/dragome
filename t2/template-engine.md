@@ -3,8 +3,8 @@ HTML templates are based in pure HTML files.
 They are logicless, and they are not required to be XHTML or well formed HTML, any HTML will work if it can be parsed by a browser.  
 Also no special tags are required, and sub templates (placeholders) are identified using custom data attribute "data-template" which is a standard mechanism.  
 
-The idea behind this template aproach is to completely separate both worlds: graphic design and developers world. This decoupled mechanism allows us to get significant productivity improvements.
-This is a basic proposed workflow for these roles interaction:
+The idea behind this template aproach is to completely separate both worlds: graphic design and developers world. This decoupled mechanism allows us to get significant productivity improvements.  
+*This is a basic proposed workflow for these roles interaction:*
 
 1. Graphic designer creates a first version of static HTML pages 
 2. Developer adds all data-template attributes to important elements
@@ -13,7 +13,8 @@ This is a basic proposed workflow for these roles interaction:
 5. Each time there is a new version of static content provided by designer it will be integrated in the application just updating html files to this version, no modifications to source code will be required. In fact any role will be able to update this UI changes just changing HTML files.
 
 
-This is how it works: for each element containing data-template attribute, template engine creates an instance of Template class following the same structure of HTML.
+##This is how it works: 
+for each element containing data-template attribute, template engine creates an instance of Template class following the same structure of HTML.
 ``` HTML
 <html>
 <body>
