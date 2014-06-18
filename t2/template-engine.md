@@ -37,6 +37,6 @@ For that, "Template.getContent" method will return this associated element, the 
 Dragome use standard W3C objects to represent all HTML related stuff.
 ``` Java
 org.w3c.dom.Element element= parent.getContent();
-element.setAttribute("class", "bordered-table");
+element.setAttribute("class", "rounded-table");
 ```
 
