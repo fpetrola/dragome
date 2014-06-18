@@ -8,7 +8,7 @@ This is a basic proposed workflow for these roles interaction:
 
 1. Graphic designer creates a first version of static HTML pages 
 2. Developer adds all data-template attributes to important elements
-3. Developer sends modified HTML pages back to designer
+3. Developer sends modified HTML pages back to designer, the designer will be able to edit it in same way he did before because only standard attributes were added.
 4. While developer continues creating components based on those HTML pages, the designer continues improving the design of HTML pages in parallel, making changes over the static content but taking into account of preserving "data-template" attributes. 
 5. Each time there is a new version of static content provided by designer it will be integrated in the application just updating html files to this version, no modifications to source code will be required. In fact any role will be able to update this UI changes just changing HTML files.
 
