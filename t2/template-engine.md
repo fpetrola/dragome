@@ -6,6 +6,7 @@ Also no special tags are required, and sub templates (placeholders) are identifi
 The idea behind this template aproach is to completely separate both worlds: graphic design and developers world. This decoupled mechanism allows us to get significant productivity improvements.  
 
 _*This is a basic proposed workflow for these roles interaction:*_
+
 1. Graphic designer creates a first version of static HTML pages 
 2. Developer adds all data-template attributes to important elements
 3. Developer sends modified HTML pages back to designer, the designer will be able to edit it in same way he did before because only standard attributes were added.
