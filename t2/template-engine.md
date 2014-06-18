@@ -1,5 +1,5 @@
 #Template Engine
-The idea behind this template aproach is to separate completly both worlds: graphic design and developers world.
+The idea behind this template aproach is to completely separate both worlds: graphic design and developers world.
 This is a basic proposed workflow for these roles interaction:
 
 1. Graphic designer creates a first version of static HTML pages 
