@@ -20,7 +20,7 @@ This is how it works: for each element containing data-template attribute, templ
 	<table data-template="parent">
 		<tr>
 			<td data-template="first-child">first</td>
-			<td data-template="second-child">first</td>
+			<td data-template="second-child">second</td>
 		</tr>
 	</table>
 </body>
