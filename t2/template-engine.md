@@ -2,7 +2,7 @@
 
 HTML templates are based in pure HTML files.  
 It is not required to be XHTML o well formed HTML, any HTML will work if it can be parsed by a browser.  
-No special tags are required, and sub templates (placeholders) are identified using custom data attribute "data-template" which is a standard mechanism.  
+Also no special tags are required, and sub templates (placeholders) are identified using custom data attribute "data-template" which is a standard mechanism.  
 For each element containing data-template attribute, template engine creates an instance of Template class following the same structure of HTML.
 ``` HTML
 <html>
