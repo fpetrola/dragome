@@ -30,6 +30,9 @@ public class HelloWolrdServiceImpl implements HelloWorldService
 
 ---
 
+
+## Synchronous calls
+
 In case you want to execute a synchronous call:
 
 ###Service instantation
@@ -43,6 +46,8 @@ String result= helloWorldService.getGreetingsFor("World");
 ```
 
 ---
+
+## Asynchronous calls
 
 And if you need to call it asynchronously, you need to create an AsyncServiceExecutor and then use it with a AsyncCallback:
 ###Service instantation
