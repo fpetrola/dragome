@@ -30,11 +30,11 @@ mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simp
 
 
 How is programming web apps with Dragome?
-     pure Java! pure HTML! runs inside browser!
+     pure Java! pure HTML! runs as js inside browser!
 
 Take a look to the following source code:
 
-Service definition
+**Service definition**
 ``` Java
 public interface HelloWorldService
 {
@@ -42,7 +42,7 @@ public interface HelloWorldService
 }
 ```
 
-Service implementation
+**Service implementation**
 ``` Java
 public class HelloWolrdServiceImpl implements HelloWorldService
 {
@@ -53,7 +53,7 @@ public class HelloWolrdServiceImpl implements HelloWorldService
 }
 ```
 
-Service consumer - GUI
+**Service consumer - GUI**
 ``` Java
 public class HelloWorldPage extends DragomeVisualActivity
 {
@@ -69,7 +69,7 @@ public class HelloWorldPage extends DragomeVisualActivity
 }
 ```
 
-HTML
+**HTML**
 ``` Html
 <html>
 <head>
