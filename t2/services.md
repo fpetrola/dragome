@@ -30,12 +30,8 @@ public class HelloWolrdServiceImpl implements HelloWorldService
 ```
 
 ---
-
-
 ## Synchronous calls
-
 In case you want to execute a synchronous call:
-
 **Service instantation**
 ``` Java
 HelloWorldService helloWorldService= serviceFactory.createSyncService(HelloWorldService.class);
@@ -47,9 +43,7 @@ String result= helloWorldService.getGreetingsFor("World");
 ```
 
 ---
-
 ## Asynchronous calls
-
 And if you need to call it asynchronously, you need to create an AsyncServiceExecutor and then use it with a AsyncCallback:
 **Service instantation**
 ``` Java
@@ -73,11 +67,9 @@ asyncHelloWorldExecutor.executeAsync(asyncHelloWorldExecutor.getService().getGre
 ```
 
 
-## Annotations
-
+## Annotation
 If there is more than one implementors of your service and you want to specify Dragome what to choose you may use this annotation in interface definition:
-
-**Service instantation**
+**Service interface**
 ``` Java
 @ServiceImplementation(HelloWolrdServiceImpl.class)
 public interface HelloWorldService
