@@ -43,13 +43,13 @@ String result= helloWorldService.getGreetingsFor("World");
 And if you need to call it asynchronously, you need to create an AsyncServiceExecutor and then use it with a AsyncCallback:
 ###Service instantation
 ``` Java
-AsyncServiceExecutor<HelloWorldService> asyncHelloWorldService= serviceFactory.createAsyncService(HelloWorldService.class);
+AsyncServiceExecutor<HelloWorldService> asyncHelloWorldExecutor= serviceFactory.createAsyncService(HelloWorldService.class);
 	
 ```
 
 ###Service instantation
 ``` Java
-asyncHelloWorldService.executeAsync(asyncHelloWorldService.getService().getGreetingsFor("Fernando"), new AsyncCallback<String>()
+asyncHelloWorldExecutor.executeAsync(asyncHelloWorldExecutor.getService().getGreetingsFor("Fernando"), new AsyncCallback<String>()
 {
 	public void onSuccess(String result)
 	{
