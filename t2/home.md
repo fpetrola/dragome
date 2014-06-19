@@ -24,7 +24,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 ##Start working with Dragome right now!
 Maven archetype
 
-``` bash
+```bash
 mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simple-webapp-archetype -DarchetypeVersion=1.0 -DgroupId={your-package-name} -DartifactId={your-app-name}
 ```
 
