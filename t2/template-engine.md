@@ -1,4 +1,6 @@
-#TML templates are based in pure HTML files.  
+#Template Engine
+
+HTML templates are based in pure HTML files.  
 They are logicless, and they are not required to be XHTML or well formed HTML, any HTML will work if it can be parsed by a browser.  
 Also no special tags are required, and sub templates (placeholders) are identified using custom data attribute "data-template" which is a standard mechanism.  
 
@@ -55,7 +57,7 @@ Template temp1= templateHandlingStrategy.loadTemplate("tree-demo", "tree-skin");
 And you can find subtemplates by path using:
 
 ``` Java
-TemplateImpl.getTemplateElementInDepth(temp1, "panel.tree-root");
+Template rootTemplate= TemplateImpl.getTemplateElementInDepth(temp1, "panel.tree-root");
 ```
 
 
