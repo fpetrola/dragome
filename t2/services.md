@@ -9,7 +9,7 @@ Dragome will automatically resolve which is the implementor of your service, wil
 
 Let's see an example:
 
-# Service definition
+## Service definition
 **Service Interface**
 ``` Java
 public interface HelloWorldService
@@ -32,7 +32,7 @@ public class HelloWolrdServiceImpl implements HelloWorldService
 ---
 
 
-# Synchronous calls
+## Synchronous calls
 
 In case you want to execute a synchronous call:
 
@@ -48,7 +48,7 @@ String result= helloWorldService.getGreetingsFor("World");
 
 ---
 
-# Asynchronous calls
+## Asynchronous calls
 
 And if you need to call it asynchronously, you need to create an AsyncServiceExecutor and then use it with a AsyncCallback:
 **Service instantation**
