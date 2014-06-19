@@ -75,7 +75,7 @@ asyncHelloWorldExecutor.executeAsync(asyncHelloWorldExecutor.getService().getGre
 
 ## Annotations
 
-If there is more than 1 implementors of your service and you want to specify Dragome what to choose you may use this annotation in interface definition:
+If there is more than one implementors of your service and you want to specify Dragome what to choose you may use this annotation in interface definition:
 
 **Service instantation**
 ``` Java
