@@ -9,7 +9,7 @@ Dragome will automatically resolve which is the implementor of your service, wil
 
 Let's see an example:
 
-###Service Interface
+#####ervice Interface
 ``` Java
 public interface HelloWorldService
 {
@@ -17,7 +17,7 @@ public interface HelloWorldService
 }
 ```
 
-###Service Implementor
+####Service Implementor
 ``` Java
 public class HelloWolrdServiceImpl implements HelloWorldService
 {
