@@ -9,7 +9,7 @@ Dragome will automatically resolve which is the implementor of your service, wil
 
 Let's see an example:
 
-Service Interface
+**Service Interface**
 ``` Java
 public interface HelloWorldService
 {
@@ -17,7 +17,7 @@ public interface HelloWorldService
 }
 ```
 
-####Service Implementor
+**Service Implementor**
 ``` Java
 public class HelloWolrdServiceImpl implements HelloWorldService
 {
@@ -35,7 +35,7 @@ public class HelloWolrdServiceImpl implements HelloWorldService
 
 In case you want to execute a synchronous call:
 
-###Service instantation
+**Service instantation**
 ``` Java
 HelloWorldService helloWorldService= serviceFactory.createSyncService(HelloWorldService.class);
 ```
