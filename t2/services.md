@@ -7,7 +7,6 @@ It's very simple, you need to create a Interface for your service, and then crea
 
 Dragome will automatically resolve which is the implementor of your service, will create a proxy that serialize the data, sends the petition to server, deserialize data, and execute the desired method of concrete class. Then if there is a result it will transport it back to the browser using the same automatic mechanism.
 
-
 Let's see an example:
 
 ###Service Interface
@@ -28,11 +27,20 @@ public class HelloWolrdServiceImpl implements HelloWorldService
 	}
 }
 ```
+
+In case you want to execute a synchronous call:
+
 ###Service instantation
 ``` Java
 HelloWorldService helloWorldService= serviceFactory.createSyncService(HelloWorldService.class);
 ```
 
+###Service invocation
+``` Java
+String result= helloWorldService.getGreetingsFor("World");
+```
+
+And if you need to call it asynchronously, you need to create an AsyncServiceExecutor and then use it with a AsyncCallback:
 ###Service instantation
 ``` Java
 AsyncServiceExecutor<HelloWorldService> asyncHelloWorldService= serviceFactory.createAsyncService(HelloWorldService.class);
