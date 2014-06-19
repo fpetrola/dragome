@@ -16,7 +16,7 @@ First of all we create a simple activity for building our page extending Dragome
 public class PersonCrudPage extends DragomeVisualActivity
 ```
 We will use a service located at server side to execute crud actions such as getPersons and savePersons.  
-A proxy to the service is obtained using a service factory, passing PersonService interface as parameter:
+A proxy to the service is obtained using a service factory (see [Services](services.md) for more info), passing PersonService interface as parameter:
 ``` Java
 PersonService personService= serviceFactory.createSyncService(PersonService.class);
 ```
