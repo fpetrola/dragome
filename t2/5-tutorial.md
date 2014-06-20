@@ -26,9 +26,9 @@ So we need to repeat each subtemplate called "row" and locate all person content
 Template engine will generate a nested sub template for each element using "data-template" attribute, you can use example data inside it to preview template as static HTML pages, it will be removed in template instantiation. For more info: [Template Engine](template-engine.md) 
 ``` HTML
 <tr data-template="row">
-	<td><input type="text" data-template="givenName">Juan</span></td>
-	<td><input type="text" data-template="surname">Perez</span></td>
-	<td><input type="text" data-template="nickname">JP</span></td>
+	<td><input type="text" data-template="givenName">Juan</input></td>
+	<td><input type="text" data-template="surname">Perez</input></td>
+	<td><select data-template="nickname">JP</select></td>
 	<td><button data-template="delete-button">delete</button></td>
 </tr>
 ```
