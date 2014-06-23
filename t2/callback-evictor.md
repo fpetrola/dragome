@@ -50,6 +50,7 @@ travelService.getDeparture(user.getEmail(), new AsyncCallback<Departure>()
 	}
 });
 ```
+----------
 ##What does Callback Evictor is?
 Callback-evictor is a tool that helps you to get rid of async callbacks hell.
 
@@ -96,10 +97,7 @@ travelService.getDeparture(user.getEmail(), new AsyncCallback<Departure>()
 	}
 });
 ```
-  
-  
-  
-
+----------
 ###And now... synchronous calls heaven!
 ``` Java
 try 
