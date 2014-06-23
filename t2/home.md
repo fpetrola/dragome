@@ -7,10 +7,10 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 ##Transparency
 * 100% transparent development: Java code runs on browser with no special modifications
 * Share code between server and client side
-* You can use Dynamic Proxies
-* You can use Java Reflection API
+* You can use [Dynamic Proxies][1]
+* You can use [Java Reflection API][2]
 * Compilation based on bytecode: You can make use of all bytecode instrumentation tools features
-* Get rid of callbacks: Make async calls with no callbacks! How? See Callback Evictor Tool!
+* Get rid of callbacks: Make async calls with no callbacks! How? See [Callback Evictor][3] Tool!
 * Neither browser or IDE plugin, nor configuration or installation required
 * Very fast web development
 * Full Java stack web applications
@@ -82,3 +82,7 @@ public class HelloWorldPage extends DragomeVisualActivity
 </html>
 ```
 
+
+  [1]: http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html
+  [2]: http://docs.oracle.com/javase/tutorial/reflect/
+  [3]: callback-evictor.md
