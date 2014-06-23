@@ -53,14 +53,9 @@ travelService.getDeparture(user.getEmail(), new AsyncCallback<Departure>()
 ----------
 ##What does Callback Evictor is?
 Callback-evictor is a tool that helps you to get rid of async callbacks hell.
-
-It's acchieved using continuation techniques combined with dynamic proxies capabilities.
-
+Using continuation techniques combined with dynamic proxies capabilities, this module transforms any asynchronous call to a sync one with no special modification to your source code.
 Instead of start creating nested callbacks, you can make sync services calls and it'll be converted to async internally.
 
-  
-  
-  
 
 ###What's the problem with callbacks?
 ####Take a look at callback hell..
