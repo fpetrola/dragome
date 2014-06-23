@@ -95,6 +95,9 @@ travelService.getDeparture(user.getEmail(), new AsyncCallback<Departure>()
 	}
 });
 ```
+
+
+
 ###And now... synchronous calls heaven!
 ``` Java
 try 
