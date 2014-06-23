@@ -53,7 +53,7 @@ travelService.getDeparture(user.getEmail(), new AsyncCallback<Departure>()
 ----------
 ##What does Callback Evictor is?
 Callback-evictor is a tool that helps you to get rid of async callbacks hell.
-Using continuation techniques combined with dynamic proxies capabilities, this module transforms any asynchronous call to a sync one with no special modification to your source code.
+Using continuation techniques combined with dynamic proxies capabilities, this module transforms any synchronous call to a asynchronous one with no special modification to your source code.
 Instead of start creating nested callbacks, you can make sync services calls and it'll be converted to async internally.
 
 
@@ -107,4 +107,24 @@ catch(Throwable caught)
 	//failure!
 } 
 ```
+
+----------
+###How can I use it?
+
+First of all you need to configure a yout environment to add Callback Evictor module.
+
+
+``` Java
+@DragomeConfiguratorImplementor
+public class EvictorConfigurator extends CallbackEvictorConfigurator implements DragomeConfigurator
+{
+	public ExamplesApplicationConfigurator()
+	{
+		continuationEnabled= false;
+	}
+}
+```
+
+
+
 
