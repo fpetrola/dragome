@@ -2,17 +2,15 @@
 
 ##Transparency
 * 100% transparent development: Java code runs on browser with no special modifications
-* Very fast learning curve
 * Share code between server and client side
-* You can use Dynamic Proxies
-* You can use Java Reflection API
+* Java 8 ready! Build your pages using lambda expressions, default methods, streams
+* You can use [Dynamic Proxies][1] and [Java Reflection API][2]
 * Compilation based on bytecode: You can make use of all bytecode instrumentation tools features
-* Get rid of callbacks: Make async calls with no callbacks! How? See callback-evictor!
+* Get rid of callbacks: Make async calls with no callbacks! How? See [Callback Evictor][3] Tool!
+* Neither browser or IDE plugin, nor configuration or installation required
+* Full Java stack web applications
+* Super fast learning curve
 * Automatic compilation process
-* No configuration required
-* No installation required
-* No browser plugin required
-* No IDE plugin required
 
 ---------
 
@@ -21,7 +19,7 @@
 * Debug your code in your favorite Java IDE
 * Javascript native interface
 * Very fast and incremental compilation
-* Forget about permutations!
+* Forget about code permutations!
 * Detailed debugging: Changes over browser DOM can be visualized step by step.
 * Very powerful template engine
 * Faster generated code
