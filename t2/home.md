@@ -31,11 +31,11 @@ mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simp
 ```
 
 
-##How is programming web apps with Dragome?
+###How is programming web apps with Dragome?
 **pure Java! pure HTML! runs as js inside browser!**
 
 
-##Take a look to the following source code:
+###Take a look to the following source code:
 **Service definition**
 ``` Java
 public interface HelloWorldService
