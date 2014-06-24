@@ -56,6 +56,7 @@ Callback-evictor is a tool that helps you to get rid of async callbacks hell.
 Using continuation techniques combined with dynamic proxies capabilities, this module transforms any synchronous call to a asynchronous one with no special modification to your source code.
 Instead of start creating nested callbacks, you can make sync services calls and it'll be converted to async internally.
 
+----------
 
 ##What's the problem with callbacks?
 ####Take a look at callback hell..
