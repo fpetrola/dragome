@@ -24,3 +24,8 @@
 * Very powerful template engine
 * Faster generated code
 * .. a lot more ..
+
+
+  [1]: http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html
+  [2]: http://docs.oracle.com/javase/tutorial/reflect/
+  [3]: callback-evictor.md
