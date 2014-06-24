@@ -88,4 +88,4 @@ public class HelloWorldPage extends DragomeVisualActivity
   [1]: http://docs.oracle.com/javase/7/docs/api/java/lang/reflect/Proxy.html
   [2]: http://docs.oracle.com/javase/tutorial/reflect/
   [3]: callback-evictor.md
-  [4]: 5-tutorial.md
+  [4]: 5-tutorial.md#DRAGOME%205'%20TUTORIAL
