@@ -6,7 +6,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 
 [Learn how to code Dragome apps in 5 minutes][4]
 
-##Transparency
+###Transparency
 * 100% transparent development: Java code runs on browser with no special modifications
 * Share code between server and client side
 * You can use [Dynamic Proxies][1]
@@ -22,7 +22,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 
 
 
-##Start working with Dragome right now!
+###Start working with Dragome right now!
 Maven archetype
 ```shell
 mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simple-webapp-archetype -DarchetypeVersion=1.0 -DgroupId={your-package-name} -DartifactId={your-app-name}
