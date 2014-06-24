@@ -8,7 +8,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 
 ----------
 
-#####Transparency
+###Transparency
 * 100% transparent development: Java code runs on browser with no special modifications
 * Share code between server and client side
 * You can use [Dynamic Proxies][1]
