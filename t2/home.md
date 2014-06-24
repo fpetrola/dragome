@@ -16,11 +16,11 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 * Compilation based on bytecode: You can make use of all bytecode instrumentation tools features
 * Get rid of callbacks: Make async calls with no callbacks! How? See [Callback Evictor][3] Tool!
 * Neither browser or IDE plugin, nor configuration or installation required
-* Very fast web development
 * Full Java stack web applications
 * Debug your code in your favorite Java IDE
 * Javascript native interface
 * Very powerful template engine
+* ... see more at [Features][5]
 
 ----------
 
@@ -98,3 +98,4 @@ public class HelloWorldPage extends DragomeVisualActivity
   [2]: http://docs.oracle.com/javase/tutorial/reflect/
   [3]: callback-evictor.md
   [4]: 5-tutorial.md#DRAGOME%205'%20TUTORIAL
+  [4]: features.md
