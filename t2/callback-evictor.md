@@ -57,7 +57,7 @@ Using continuation techniques combined with dynamic proxies capabilities, this m
 Instead of start creating nested callbacks, you can make sync services calls and it'll be converted to async internally.
 
 
-###What's the problem with callbacks?
+##What's the problem with callbacks?
 ####Take a look at callback hell..
 ``` Java
 travelService.getDeparture(user.getEmail(), new AsyncCallback<Departure>() 
