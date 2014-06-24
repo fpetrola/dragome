@@ -12,8 +12,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 * 100% transparent development: Java code runs on browser with no special modifications
 * Share code between server and client side
 * Java 8 ready! Build your pages using lambda expressions, default methods, streams
-* You can use [Dynamic Proxies][1]
-* You can use [Java Reflection API][2]
+* You can use [Dynamic Proxies][1] and [Java Reflection API][2]
 * Compilation based on bytecode: You can make use of all bytecode instrumentation tools features
 * Get rid of callbacks: Make async calls with no callbacks! How? See [Callback Evictor][3] Tool!
 * Neither browser or IDE plugin, nor configuration or installation required
