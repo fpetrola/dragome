@@ -6,7 +6,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 
 [Learn how to code Dragome apps in 5 minutes][4]
 
-###Transparency
+#####Transparency
 * 100% transparent development: Java code runs on browser with no special modifications
 * Share code between server and client side
 * You can use [Dynamic Proxies][1]
