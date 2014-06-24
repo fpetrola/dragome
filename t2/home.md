@@ -22,6 +22,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 * Javascript native interface
 * Very powerful template engine
 
+----------
 
 
 ###Start working with Dragome right now!
@@ -30,10 +31,12 @@ Maven archetype
 mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simple-webapp-archetype -DarchetypeVersion=1.0 -DgroupId={your-package-name} -DartifactId={your-app-name}
 ```
 
+----------
 
 ###How is programming web apps with Dragome?
 **pure Java! pure HTML! runs as js inside browser!**
 
+----------
 
 ###Take a look to the following source code:
 **Service definition**
