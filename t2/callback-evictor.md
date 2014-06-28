@@ -23,8 +23,10 @@ The browser will perform the action usually in a different thread, and trigger t
 
 ####Example of synchronous invocation
 ``` Java
-public interface HelloWorldService
+public interface TravelDemo
 {
+    TravelService travelService= serviceFactory.createSyncService(TravelService.class);
+    
     Departure departure= travelService.getDeparture(user.getEmail());
     System.out.println("flight id:" + departure.getFlightId());
 }
@@ -114,7 +116,7 @@ catch(Throwable caught)
 ----------
 ###How can I use it?
 
-First of all you need to configure a yout environment to add Callback Evictor module.
+First of all you need to configure a yout environment to add Callback Evictor plugin.
 
 
 ``` Java
@@ -128,6 +130,16 @@ public class EvictorConfigurator extends CallbackEvictorConfigurator implements 
 }
 ```
 
+After you've configured Callback Evictor plugin you will be able to make synchronous invocations, and all of them will be converted to asynchronous ones in background. 
+
+####For example
+``` Java
+    TravelService travelService= serviceFactory.createSyncService(TravelService.class);
+    Departure departure= travelService.getDeparture(user.getEmail());
+    System.out.println("flight id:" + departure.getFlightId());
+```
+
+Activating callback evictor, this code will produce an asynchronous call to travel service, disposing its execution thread giving control to the browser and taking the control again when resulting Departure value is available.
 
 
 
