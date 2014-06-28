@@ -35,6 +35,15 @@ VisualTextField<String> textfield= new VisualTextFieldImpl<String>("textfield1")
 textfield.setValue("text");
 ```
 
+###VisualPanel
+
+Usage example:
+``` Java
+VisualPanel panel= new VisualPanelImpl("panel1");
+panel.addChild(label);
+panel.addChild(button);
+panel.addChild(textfield);
+```
 
 
 
