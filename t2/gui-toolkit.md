@@ -35,6 +35,15 @@ VisualTextField<String> textfield= new VisualTextFieldImpl<String>("textfield1")
 textfield.setValue("text");
 ```
 
+
+###VisualComboBox
+
+Usage example:
+``` Java
+VisualComboBox combobox= new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja"))
+```
+
+
 ###VisualPanel
 
 Usage example:
@@ -46,6 +55,26 @@ panel.addChild(textfield);
 ```
 
 
+##Binding models
+
+
+###Binding a textfield
+
+Using ModelBinder:
+``` Java
+VisualTextFieldImpl<String> textField= new VisualTextFieldImpl<String>("name");
+ModelBinder<Person> binder= new ModelBinder<Person>(person);
+binder.bindMemberToValueHolder("name", textField, String.class);
+```
+
+Using Pectin:
+``` Java
+VisualTextFieldImpl<String> textField= new VisualTextFieldImpl<String>("name");
+AbstractBeanModelProvider<Person> modelProvider= new ReflectionBeanModelProvider<Person>(Person.class);
+FieldModel<String> nameFieldModel= new FormModel().fieldOfType(String.class).boundTo(modelProvider, "name");
+FormBinder binder= new FormBinder();
+binder.bind(nameFieldModel).to(textField);
+```
 
 
 
