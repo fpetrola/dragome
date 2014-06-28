@@ -15,8 +15,28 @@ label.setValue("text");
 
 Usage example:
 ``` Java
-VisualButton button= new VisualButtonImpl("button", v -> System.out.println("Click"));
+VisualButton button= new VisualButtonImpl("button1", v -> System.out.println("Click"));
 ```
+
+
+###VisualCheckbox
+
+Usage example:
+``` Java
+VisualCheckbox checkBox= new VisualCheckboxImpl("check1");
+checkBox.setValue(true);
+```
+
+###VisualTextField
+
+Usage example:
+``` Java
+VisualTextField<String> textfield= new VisualTextFieldImpl<String>("textfield1");
+textfield.setValue("text");
+```
+
+
+
 
 
 
