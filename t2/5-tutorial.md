@@ -2,7 +2,7 @@
 #5' Dragome Tutorial
 
 Let's create a simple crud using Dragome.  
-**Remember that all we need to do it is pure Java code and pure static HTML files, then Dragome will transform it all to Javascript and dynamic HTML pages automatically.**
+**Remember that all we need is pure Java code and pure static HTML files, then Dragome will transform it all to Javascript and dynamic HTML pages automatically.**
 
 
 We will make use of some tools provided by the SDK: 
