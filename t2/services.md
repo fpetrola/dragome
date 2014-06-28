@@ -68,8 +68,8 @@ asyncHelloWorldExecutor.executeAsync(asyncHelloWorldExecutor.getService().getGre
 });	
 ```
 
-
-## Annotation
+---
+## 'ServiceImplementation' Annotation
 If there is more than one implementors of your service and you want to specify Dragome what to choose you may use this annotation in interface definition:
 
 **Service interface**
