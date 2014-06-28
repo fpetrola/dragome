@@ -19,6 +19,8 @@ developers register an event handler for a given object (e.g. HTML Element or ot
 
 The browser will perform the action usually in a different thread, and trigger the event in the main thread when appropriate.
 
+----------
+
 ####Example of synchronous invocation
 ``` Java
 public interface HelloWorldService
