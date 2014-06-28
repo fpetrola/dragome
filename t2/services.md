@@ -1,6 +1,6 @@
 #Services in Dragome
 
-There23 are some parts of your application that need to be located at server side, such as database access, ORM interactions, heavy load proccesses, etc. 
+There are some parts of your application that need to be located at server side, such as database access, ORM interactions, heavy load proccesses, etc. 
 
 For this purpose a services mechanism is provided, that helps you to communicate both sides with almost no effort. 
 It's very simple, you need to create a Interface for your service, and then create a concrete class that implements it, just this.
