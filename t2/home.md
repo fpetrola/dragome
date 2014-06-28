@@ -9,15 +9,18 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 ----------
 
 ##Why Dragome
-* Code everything in Java (server side and client side), it will be transformed to javascript automatically. 
+* Code everything in Java (server side and client side), it will be transformed to javascript automatically.
+* Higher level of abstraction for GUI development using components.
+* High performance for generated client side code.
 * Java based development process and code reuse.
 * Use the excellent debugging support offered by the mature Java IDEs.
-* The built-in IDE support to refactor Java code can directly be put to good use to maintain a simple design at all times.
+* Make use of built-in IDE support to refactor Java code, improve your agile development.
 * Use the IDE syntax highlighting, error checking, code completion shortcuts, fix proposals, etc
 * You can create highly responsive web applications with heavy lifting on the client-side and reduced chattiness with the server-side.
 * You will minimize contact with HTML files. They are managed by graphics designers not developers. Dragome uses exactly the same files that designers are editing, just plain HTML files.
-* UI Updates can be deployed by non developers roles because code is totally decoupled from HTML files.
+* UI Updates can be deployed by non developer roles because code is totally decoupled from HTML files.
 * Use continuation in your development: you can pause your program and continue it whenever you need.
+* Unit testing integration: you can also run your Junit tests on a browser.
 
 
 ###Top features
