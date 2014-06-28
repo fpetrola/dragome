@@ -76,5 +76,11 @@ FormBinder binder= new FormBinder();
 binder.bind(nameFieldModel).to(textField);
 ```
 
+As Dragome Form Bindings is based on GWT Pectin Project [GWt Pectin][1], you can use a lot of its great features.
+Take a look at: [GuideBindingToBeans][2]
+
+
+[1]: https://code.google.com/p/gwt-pectin
+[2]: https://code.google.com/p/gwt-pectin/wiki/GuideBindingToBeans
 
 
