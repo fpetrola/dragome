@@ -2,7 +2,7 @@
 
 ##Components
 
-####VisualLabel
+###VisualLabel
 
 Usage example:
 
