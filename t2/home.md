@@ -19,7 +19,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 * UI Updates can be deployed by non developers roles because code is totally decoupled from HTML files.
 
 
-###Transparency
+###Top features
 * 100% transparent development: Java code runs on browser with no special modifications
 * Share code between server and client side
 * Java 8 ready! Build your pages using lambda expressions, default methods, streams
