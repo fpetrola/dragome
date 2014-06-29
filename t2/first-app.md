@@ -62,9 +62,23 @@ You can start a servlet container using this maven command:
 mvn jetty:run
 ```
 
-Since HelloWorldPage class has a @PageAlias annotation associated with value "helloworld", you can find this page in the following URL:
+To run any Dragome page you need to start it calling a HTML file that includes "dragome.js" file.
+``` Html
+<script type="text/javascript" src="dragome/dragome.js"></script>
+```
+
+In case you want to debug some part in js, you can use a verbose version of js files including instead the following:
+
+``` Html
+<script type="text/javascript" src="dragome-resources/dragome-debug.js"></script>
+```
+
+
+Since HelloWorldPage class has an associated @PageAlias annotation with value "helloworld", you can find this page in the following URL:
 
 http://localhost:8080/my-app1/run.html?helloworld
+
+
 
 
 
