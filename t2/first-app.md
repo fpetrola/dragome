@@ -75,13 +75,13 @@ In case you want to debug some part in js, you can use a separated version of js
 
 Since HelloWorldPage class has an associated @PageAlias annotation with value "helloworld", you can find this page in the following URL:
 
-http://localhost:8080/my-app1/run.html?helloworld
+*http://localhost:8080/my-app1/run.html?helloworld*
 
 
 This URL will execute the page in production mode (running everything on browser), but if you want debug it in Java you may add a query string "debug=true"
 
 
-http://localhost:8080/my-app1/run.html?helloworld?debug=true
+*http://localhost:8080/my-app1/run.html?helloworld?debug=true*
 
 
 
