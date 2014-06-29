@@ -1,7 +1,9 @@
 #Setup
 
 There is no installation required, neither browser or IDE plugin required.
-Avoiding this type of sad problems...
+
+
+Avoiding these sad problems...
 
 ![alt text](gwt-plugin-chrome.png "gwt-plugin-chrome")
 
