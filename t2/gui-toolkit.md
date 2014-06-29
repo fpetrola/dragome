@@ -76,6 +76,25 @@ FormBinder binder= new FormBinder();
 binder.bind(nameFieldModel).to(textField);
 ```
 
+###Binding a list
+
+Using ModelBinder:
+``` Java
+VisualListBox<Wine> wineListBox= new VisualListBoxImpl<Wine>("wines", Arrays.asList(Wine.CAB_SAV, Wine.MERLOT, Wine.SHIRAZ));
+wineListBox.setMultipleItems(true);
+wineListBox.setListModel(new ArrayListModel<Wine>(Wine.MERLOT, Wine.SHIRAZ));
+binder.bindListMemberToHasListModel("favoriteWines", wineListBox, Wine.class);
+```
+
+###Binding a formatted age field
+
+Using ModelBinder:
+``` Java
+VisualTextField<Integer> ageTextField= new VisualTextFieldImpl<Integer>("age");
+binder.bindFormattedMemberToValueHolder("age", ageTextField, Integer.class, new AgeFormat());
+```
+
+
 As Dragome Form Bindings is based on GWT Pectin Project [GWT Pectin][1], you can use a lot of its great features.
 For more info Take a look at: [GuideBindingToBeans][2]
 
