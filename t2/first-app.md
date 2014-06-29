@@ -67,8 +67,7 @@ To run any Dragome page you need to start it calling a HTML file that includes "
 <script type="text/javascript" src="dragome/dragome.js"></script>
 ```
 
-In case you want to debug some part in js, you can use a verbose version of js files including instead the following:
-
+In case you want to debug some part in js, you can use a separated version of js files including the following instead:
 ``` Html
 <script type="text/javascript" src="dragome-resources/dragome-debug.js"></script>
 ```
@@ -77,6 +76,13 @@ In case you want to debug some part in js, you can use a verbose version of js f
 Since HelloWorldPage class has an associated @PageAlias annotation with value "helloworld", you can find this page in the following URL:
 
 http://localhost:8080/my-app1/run.html?helloworld
+
+
+This URL will execute the page in production mode (running everything on browser), but if you want debug it in Java you may add a query string "debug=true"
+
+
+http://localhost:8080/my-app1/run.html?helloworld?debug=true
+
 
 
 
