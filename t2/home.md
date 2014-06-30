@@ -57,7 +57,10 @@ mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simp
 
 ----------
 
-###Take a look to the following source code:
+###Take a look at the following source code:
+
+For more details see [Hello World Application][6]
+
 **Service definition**
 ``` Java
 public interface HelloWorldService
@@ -114,3 +117,5 @@ public class HelloWorldPage extends DragomeVisualActivity
   [3]: callback-evictor.md
   [4]: 5-tutorial.md#DRAGOME%205'%20TUTORIAL
   [5]: features.md
+  [6]: helloworld-app.md
+
