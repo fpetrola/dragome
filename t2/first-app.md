@@ -80,7 +80,7 @@ __http://localhost:8080/my-app1/run.html?helloworld__
 
 This URL will execute the page in production mode (running everything on browser), but if you want debug it in Java you may add a query string "debug=true"
 
-__http://localhost:8080/my-app1/run.html?helloworld?debug=true__
+__http://localhost:8080/my-app1/run.html?helloworld&debug=true__
 
 
 
