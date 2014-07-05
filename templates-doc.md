@@ -90,6 +90,11 @@ El maquetado de la UI tiene la ventaja de presentarle al diseñador los distinto
 Esto se da gracias al uso de HTML sin logica, y estaticos.
 En cambio mecanismos como AngularJS impide al diseñador ver los diferentes estados porque necesita ser ejecutado para visualizarlos. Esto impide la manipulacion directa del maquetado por no contar con el HTML estatico completo.
 
+El diseñador tiene que aprender angularjs para poder interpretar el resultado del template de acuerdo a sus diferentes estados/comportamiento.
+Y  en caso de HTML estaticos lo unico a tomar en cuenta es el atributo "data-template", preservar, conservarlo.
+
+Gracias a esto se pueden intercambiar diferentes HTML que cumplan con los mismos data-template. 
+Y en caso de querer hacerlo en angularjs habria que replicar todas las declaraciones de un template en un nuevo HTML.
 
 
 
