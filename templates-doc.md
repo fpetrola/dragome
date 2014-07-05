@@ -84,6 +84,14 @@ Reutilizacion de templates.
 Reuso de componentes.
 
 
+###Dragome 4 designers
+
+El maquetado de la UI tiene la ventaja de presentarle al diseñador los distintos estados posibles que puede representar un componente grafico.
+Esto se da gracias al uso de HTML sin logica, y estaticos.
+En cambio mecanismos como AngularJS impide al diseñador ver los diferentes estados porque necesita ser ejecutado para visualizarlos. Esto impide la manipulacion directa del maquetado por no contar con el HTML estatico completo.
+
+
+
 
 ###Dragome tunning
 
