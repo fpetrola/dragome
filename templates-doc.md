@@ -130,6 +130,16 @@ Configuraciones:
 9. 
 
 
+##Ideas
+
+ 
+* Cuando un data-template se repite, se genera una ambiguedad que detecta el fwk.
+* Los casos a resolver son:
+* Mediante el builder indicar el parent data-template, o sea que se hace explicito que se trata de un data-template diferente.
+* ò Mediante otro builder se indica que corresponde a un estado en particular del modelo. Aqui se deberan especificar todos los estados y casi obligatoriamente un builder default.
+
+
+
 
 
 
