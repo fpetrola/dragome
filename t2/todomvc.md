@@ -35,19 +35,16 @@ public class TodosPage extends DragomeVisualActivity
 		footerBuilder.show(footerBuilder.mainComponent()).when(() -> !todoController.getTodos().isEmpty());
 		footerBuilder.bindTemplate("items-count").toComponent(VisualLabel.class).withModel(TodoController::getRemainingCount, TodoController::setRemainingCount).build();
 		footerBuilder.bindTemplate("items-label").toComponent(VisualLabel.class).with(() -> todoController.getRemainingCount() == 1 ? "item" : "items").build();
-		addFilter(footerBuilder, "/");
-		addFilter(footerBuilder, "/active");
-		addFilter(footerBuilder, "/completed");
+
+		Stream.of("/", "/active", "/completed").forEach(location -> {
+			VisualComponent component= footerBuilder.bindTemplate("filter:" + location).toComponent(VisualLink.class).addClickListener(v -> todoController.setLocation(location)).build().component();
+			footerBuilder.style(component).with("selected").when(() -> todoController.getLocation().equals(location));
+		});
 
 		ComponentBuilder<TodoController> clearCompletedBuilder= footerBuilder.bindTemplate("clear-completed").toComponent(VisualPanel.class).addClickListener(v -> todoController.clearCompletedTodos()).builderFromHere();
 		clearCompletedBuilder.bindTemplate("clear-completed-number").toComponent(VisualLabel.class).withModel(TodoController::getCompletedCount, TodoController::setCompletedCount).build();
 
 		clearCompletedBuilder.show(clearCompletedBuilder.mainComponent()).when(() -> todoController.getCompletedCount() > 0);
-	}
-	private void addFilter(ComponentBuilder<TodoController> footerBuilder, String location)
-	{
-		VisualComponent component= footerBuilder.bindTemplate("filter:" + location).toComponent(VisualLink.class).addClickListener(v -> todoController.setLocation(location)).build().component();
-		footerBuilder.style(component).with("selected").when(() -> todoController.getLocation().equals(location));
 	}
 
 	private void addTodo(int code)
@@ -61,6 +58,5 @@ public class TodosPage extends DragomeVisualActivity
 		if (keyCode == KeyUpListener.KEY_ESC)
 			todoController.doneEditing(todo);
 	}
-}
-```
+}```
 
