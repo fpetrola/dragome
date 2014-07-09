@@ -6,15 +6,11 @@ public class TodosPage extends DragomeVisualActivity
 	public void build()
 	{
 		ComponentBuilder<TodoController> componentBuilder= new ComponentBuilder<TodoController>(mainPanel, todoController);
+		componentBuilder.bindTemplate("new-todo").toComponent(VisualTextField.class).withModel(TodoController::getNewTodo, TodoController::setNewTodo).addKeyListener(this::addTodo).build();
 
 		ComponentBuilder<TodoController> mainSectionBuilder= componentBuilder.bindTemplate("main-section").toComponent(VisualPanel.class).builderFromHere();
-
 		VisualComponent allChecked= mainSectionBuilder.bindTemplate("toggle-all").toComponent(VisualCheckbox.class).withModel(TodoController::isAllChecked, TodoController::setAllChecked).build().component();
 		mainSectionBuilder.show(allChecked).when(() -> !todoController.todos.isEmpty());
-
-		componentBuilder.bindTemplate("new-todo").toComponent(VisualTextField.class).withModel(TodoController::getNewTodo, TodoController::setNewTodo).addKeyListener(this::addTodo).build();
-		componentBuilder.bindTemplate("footer-section").toComponent(VisualPanel.class);
-
 		mainSectionBuilder.show(mainSectionBuilder.mainComponent()).when(() -> !todoController.getTodos().isEmpty());
 
 		mainSectionBuilder.bindTemplate("completed-todo").toComponent(VisualPanel.class).withListModel(TodoController::getTodos).filter(TodoController::getStatusFilter).repeatUsing((Todo todo, ComponentBuilder<Todo> icb) -> {
@@ -63,8 +59,6 @@ public class TodosPage extends DragomeVisualActivity
 	public void editing(int keyCode, Todo todo)
 	{
 		if (keyCode == KeyUpListener.KEY_ESC)
-			todoController.doneEditing(todo);
-		else if (keyCode == KeyUpListener.KEY_ENTER)
 			todoController.doneEditing(todo);
 	}
 }
