@@ -36,10 +36,7 @@ public class TodosPage extends DragomeVisualActivity
 	private void createFooterPanel(ComponentBuilder<TodoController> mainComponentBuilder)
 	{
 		ComponentBuilder<TodoController> footerBuilder= mainComponentBuilder.bindTemplate("footer-section").toComponent(VisualPanel.class).builderFromHere();
-		footerBuilder.show(footerBuilder.mainComponent()).when(() -> {
-			return !todoController.getTodos().isEmpty();
-		});
-
+		footerBuilder.show(footerBuilder.mainComponent()).when(() -> !todoController.getTodos().isEmpty());
 		footerBuilder.bindTemplate("items-count").toComponent(VisualLabel.class).withModel(TodoController::getRemainingCount, TodoController::setRemainingCount).build();
 		footerBuilder.bindTemplate("items-label").toComponent(VisualLabel.class).with(() -> todoController.getRemainingCount() == 1 ? "item" : "items").build();
 		addFilter(footerBuilder, "/");
@@ -51,7 +48,6 @@ public class TodosPage extends DragomeVisualActivity
 
 		clearCompletedBuilder.show(clearCompletedBuilder.mainComponent()).when(() -> todoController.getCompletedCount() > 0);
 	}
-	
 	private void addFilter(ComponentBuilder<TodoController> footerBuilder, String location)
 	{
 		VisualComponent component= footerBuilder.bindTemplate("filter:" + location).toComponent(VisualLink.class).addClickListener(v -> todoController.setLocation(location)).build().component();
