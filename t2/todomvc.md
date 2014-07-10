@@ -29,7 +29,7 @@ public class TodosPage extends DragomeVisualActivity
 	private void createFooterPanel(ComponentBuilder<TodoManager> mainComponentBuilder, TodoManager todoManager)
 	{
 		ComponentBuilder<TodoManager> footerBuilder= mainComponentBuilder.bindTemplate("footer-section").as(VisualPanel.class).builderFromHere();
-		footerBuilder.show(footerBuilder.panel()).when(() -> !todoManager.getTodos().isEmpty());
+		footerBuilder.showWhen(() -> !todoManager.getTodos().isEmpty());
 		footerBuilder.bindTemplate("items-count").as(VisualLabel.class).toProperty(TodoManager::getRemainingCount, TodoManager::setRemainingCount).build();
 		footerBuilder.bindTemplate("items-label").as(VisualLabel.class).to(() -> todoManager.getRemainingCount() == 1 ? "item" : "items").build();
 
@@ -40,8 +40,7 @@ public class TodosPage extends DragomeVisualActivity
 
 		ComponentBuilder<TodoManager> clearCompletedBuilder= footerBuilder.bindTemplate("clear-completed").as(VisualPanel.class).onClick(v -> todoManager.clearCompletedTodos()).builderFromHere();
 		clearCompletedBuilder.bindTemplate("clear-completed-number").as(VisualLabel.class).toProperty(TodoManager::getCompletedCount, TodoManager::setCompletedCount).build();
-
-		clearCompletedBuilder.show(clearCompletedBuilder.panel()).when(() -> todoManager.getCompletedCount() > 0);
+		clearCompletedBuilder.showWhen(() -> todoManager.getCompletedCount() > 0);
 	}
 
 	private void addTodo(TodoManager todoManager, int code)
