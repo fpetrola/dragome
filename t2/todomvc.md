@@ -6,22 +6,14 @@ public class TodosPage extends DragomeVisualActivity
 		ComponentBuilder<TodoManager> componentBuilder= new ComponentBuilder<TodoManager>(mainPanel, new TodoManagerImpl("/", new LocalStorage()));
 		TodoManager todoManager= componentBuilder.getModel();
 
-		componentBuilder.bindTemplate("new-todo").as(VisualTextField.class).toProperty(TodoManager::getNewTodo, TodoManager::setNewTodo).onKey(code -> {
-			if (code == KeyUpListener.KEY_ENTER)
-				todoManager.addTodo();
-		}).build();
-
+		componentBuilder.bindTemplate("new-todo").as(VisualTextField.class).toProperty(TodoManager::getNewTodo, TodoManager::setNewTodo).onKeyUp(KeyUpListener.KEY_ENTER, () -> todoManager.addTodo()).build();
 		ComponentBuilder<TodoManager> mainSectionBuilder= componentBuilder.bindTemplate("main-section").as(VisualPanel.class).builderFromHere();
 		VisualCheckbox allChecked= mainSectionBuilder.bindTemplate("toggle-all").as(VisualCheckbox.class).toProperty(TodoManager::isAllChecked, TodoManager::setAllChecked).onClick(v -> todoManager.markAll(!todoManager.isAllChecked())).build();
 		mainSectionBuilder.show(allChecked).when(() -> !todoManager.getTodos().isEmpty());
 		mainSectionBuilder.show(mainSectionBuilder.panel()).when(() -> !todoManager.getTodos().isEmpty());
 
 		mainSectionBuilder.bindTemplate("completed-todo").as(VisualPanel.class).toListProperty(TodoManager::getTodos).filter(TodoManager::getStatusFilter).repeat((Todo todo, ComponentBuilder<Todo> icb) -> {
-			icb.bindTemplate("todo-input").as(VisualTextField.class).toProperty(Todo::getTitle, Todo::setTitle).onKey(code -> {
-				if (code == KeyUpListener.KEY_ESC)
-					todoManager.doneEditing(todo);
-			}).build();
-			
+			icb.bindTemplate("todo-input").as(VisualTextField.class).toProperty(Todo::getTitle, Todo::setTitle).onKeyUp(KeyUpListener.KEY_ESC, () -> todoManager.doneEditing(todo)).build();
 			icb.bindTemplate("title").as(VisualLabel.class).toProperty(Todo::getTitle, Todo::setTitle).onDoubleClick(v -> todoManager.editTodo(todo)).build();
 			icb.bindTemplate("completed").as(VisualCheckbox.class).toProperty(Todo::isCompleted, Todo::setCompleted).build();
 			icb.bindTemplate("destroy").as(VisualButton.class).onClick(v -> todoManager.removeTodo(todo)).build();
@@ -43,4 +35,5 @@ public class TodosPage extends DragomeVisualActivity
 		clearCompletedBuilder.bindTemplate("clear-completed-number").as(VisualLabel.class).toProperty(TodoManager::getCompletedCount, TodoManager::setCompletedCount).build();
 		clearCompletedBuilder.showWhen(() -> todoManager.getCompletedCount() > 0);
 	}
-}```
+}
+```
