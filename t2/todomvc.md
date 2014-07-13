@@ -3,8 +3,8 @@ public class TodosPage extends DragomeVisualActivity
 {
 	public void build()
 	{
-		ComponentBuilder<TodoManager> componentBuilder= new ComponentBuilder<TodoManager>(mainPanel, new TodoManagerImpl("/", new LocalStorage()));
-		TodoManager todoManager= componentBuilder.getModel();
+		TodoManager todoManager= new TodoManager("/", new LocalStorage<Todo>());
+		ComponentBuilder<TodoManager> componentBuilder= new ComponentBuilder<TodoManager>(mainPanel, todoManager);
 
 		componentBuilder.bindTemplate("new-todo").as(VisualTextField.class).toProperty(TodoManager::getNewTodo, TodoManager::setNewTodo).onKeyUp(() -> todoManager.addTodo(), KEY_ENTER).build();
 		ComponentBuilder<TodoManager> mainSectionBuilder= componentBuilder.bindTemplate("main-section").as(VisualPanel.class).builderFromHere();
@@ -15,10 +15,10 @@ public class TodosPage extends DragomeVisualActivity
 		mainSectionBuilder.bindTemplate("completed-todo").as(VisualPanel.class).toListProperty(TodoManager::getTodos).filter(TodoManager::getStatusFilter).repeat((todo, builder) -> {
 			builder.bindTemplate("todo-input").as(VisualTextField.class).toProperty(Todo::getTitle, Todo::setTitle).onKeyUp(() -> todoManager.doneEditing(todo), KEY_ESC, KEY_ENTER).onBlur(v -> todoManager.doneEditing(todo)).build();
 			builder.bindTemplate("title").as(VisualLabel.class).toProperty(Todo::getTitle, Todo::setTitle).onDoubleClick(v -> todoManager.editTodo(todo)).build();
-			builder.bindTemplate("completed").as(VisualCheckbox.class).toProperty(Todo::isCompleted, Todo::setCompleted).build();
+			builder.bindTemplate("completed").as(VisualCheckbox.class).toProperty(Todo::isCompleted, Todo::setCompleted).onClick(v -> todoManager.todoCompleted(todo)).build();
 			builder.bindTemplate("destroy").as(VisualButton.class).onClick(v -> todoManager.removeTodo(todo)).build();
 			builder.styleWith("completed").when(todo::isCompleted);
-			builder.styleWith("editing").when(() -> todo == todoManager.getEditedTodo());
+			componentBuilder.style(builder.panel()).with("editing").when(() -> todo == todoManager.getEditedTodo());
 		});
 
 		ComponentBuilder<TodoManager> footerBuilder= componentBuilder.bindTemplate("footer-section").as(VisualPanel.class).builderFromHere();
