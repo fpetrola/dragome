@@ -9,7 +9,7 @@ The exact terms of this license can be found in the "dragome-LICENSE.txt" file.
 
 For all 3rd party libraries facilitated by Dragome their individual licenses apply. These can be found in the "3rdparty-LICENSE" folder.
 
-
+``` text
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -685,5 +685,6 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <http://www.gnu.org/philosophy/why-not-lgpl.html>.
 
+```
 
 #Included Software and Licenses
