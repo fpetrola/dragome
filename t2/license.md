@@ -3,7 +3,7 @@
 
 Terms of Service
 
-The Dragome software and sample code developed by Fernando Petrola is licensed under the GNU Public License, version 3. Other software included in this distribution is provided under other licenses, as listed in the Included Software and Licenses section at the bottom of this page. Source code for software included in this distribution is available from the Dragome project.
+The Dragome software and sample code developed by Fernando Petrola is licensed under the GNU Public License, version 3. Other software included in this distribution is provided under other licenses. Source code for software included in this distribution is available from the Dragome project.
 
 The exact terms of this license can be found in the "dragome-LICENSE.txt" file. 
 
