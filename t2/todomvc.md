@@ -3,25 +3,25 @@ public class TodosPage extends DragomeVisualActivity
 {
 	public void build()
 	{
-		TodoManager todoManager= new TodoManager("/", new LocalStorage<Todo>());
+		TodoManager todoManager= new TodoManager(ServiceLocator.getInstance().getParametersHandler().getFragment(), new LocalStorage());
 		ComponentBuilder<TodoManager> componentBuilder= new ComponentBuilder<TodoManager>(mainPanel, todoManager);
 
-		componentBuilder.bindTemplate("new-todo").as(VisualTextField.class).toProperty(TodoManager::getNewTodo, TodoManager::setNewTodo).onKeyUp(() -> todoManager.addTodo(), KEY_ENTER).build();
-		ComponentBuilder<TodoManager> mainSectionBuilder= componentBuilder.bindTemplate("main-section").as(VisualPanel.class).builderFromHere();
+		componentBuilder.bindTemplate("new-todo").as(VisualTextField.class).toProperty(TodoManager::getNewTodo, TodoManager::setNewTodo).onKeyUp((v, c) -> todoManager.addTodo(), KEY_ENTER).build();
+		ComponentBuilder<TodoManager> mainSectionBuilder= componentBuilder.bindTemplate("main-section").as(VisualPanel.class).childBuilder();
 		VisualCheckbox allChecked= mainSectionBuilder.bindTemplate("toggle-all").as(VisualCheckbox.class).toProperty(TodoManager::isAllChecked, TodoManager::setAllChecked).onClick(v -> todoManager.markAll(!todoManager.isAllChecked())).build();
 		mainSectionBuilder.show(allChecked).when(() -> !todoManager.getTodos().isEmpty());
-		mainSectionBuilder.show(mainSectionBuilder.panel()).when(() -> !todoManager.getTodos().isEmpty());
+		mainSectionBuilder.showWhen(() -> !todoManager.getTodos().isEmpty());
 
 		mainSectionBuilder.bindTemplate("completed-todo").as(VisualPanel.class).toListProperty(TodoManager::getTodos).filter(TodoManager::getStatusFilter).repeat((todo, builder) -> {
-			builder.bindTemplate("todo-input").as(VisualTextField.class).toProperty(Todo::getTitle, Todo::setTitle).onKeyUp(() -> todoManager.doneEditing(todo), KEY_ESC, KEY_ENTER).onBlur(v -> todoManager.doneEditing(todo)).build();
+			builder.bindTemplate("todo-input").as(VisualTextField.class).toProperty(Todo::getTitle, Todo::setTitle).onKeyUp((v, c) -> todoManager.doneEditing(todo), KEY_ESC, KEY_ENTER).onBlur(v -> todoManager.doneEditing(todo)).build();
 			builder.bindTemplate("title").as(VisualLabel.class).toProperty(Todo::getTitle, Todo::setTitle).onDoubleClick(v -> todoManager.editTodo(todo)).build();
 			builder.bindTemplate("completed").as(VisualCheckbox.class).toProperty(Todo::isCompleted, Todo::setCompleted).onClick(v -> todoManager.todoCompleted(todo)).build();
 			builder.bindTemplate("destroy").as(VisualButton.class).onClick(v -> todoManager.removeTodo(todo)).build();
 			builder.styleWith("completed").when(todo::isCompleted);
-			componentBuilder.style(builder.panel()).with("editing").when(() -> todo == todoManager.getEditedTodo());
+			builder.styleWith("editing").when(() -> todo == todoManager.getEditedTodo());
 		});
 
-		ComponentBuilder<TodoManager> footerBuilder= componentBuilder.bindTemplate("footer-section").as(VisualPanel.class).builderFromHere();
+		ComponentBuilder<TodoManager> footerBuilder= componentBuilder.bindTemplate("footer-section").as(VisualPanel.class).childBuilder();
 		footerBuilder.showWhen(() -> !todoManager.getTodos().isEmpty());
 		footerBuilder.bindTemplate("items-count").as(VisualLabel.class).toProperty(TodoManager::getRemainingCount, TodoManager::setRemainingCount).build();
 		footerBuilder.bindTemplate("items-label").as(VisualLabel.class).to(() -> todoManager.getRemainingCount() == 1 ? "item" : "items").build();
@@ -31,7 +31,7 @@ public class TodosPage extends DragomeVisualActivity
 			footerBuilder.style(link).with("selected").when(() -> todoManager.getLocation().equals(location));
 		});
 
-		ComponentBuilder<TodoManager> clearCompletedBuilder= footerBuilder.bindTemplate("clear-completed").as(VisualPanel.class).onClick(v2 -> todoManager.clearCompletedTodos()).builderFromHere();
+		ComponentBuilder<TodoManager> clearCompletedBuilder= footerBuilder.bindTemplate("clear-completed").as(VisualPanel.class).onClick(v2 -> todoManager.clearCompletedTodos()).childBuilder();
 		clearCompletedBuilder.bindTemplate("clear-completed-number").as(VisualLabel.class).toProperty(TodoManager::getCompletedCount, TodoManager::setCompletedCount).build();
 		clearCompletedBuilder.showWhen(() -> todoManager.getCompletedCount() > 0);
 	}
