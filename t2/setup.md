@@ -29,7 +29,7 @@ public class ExamplesApplicationConfigurator extends CompositeIntrumentationDrag
 	public ExamplesApplicationConfigurator()
 	{
 		callbackEvictorConfigurator= new CallbackEvictorConfigurator();
-		callbackEvictorConfigurator.setEnabled(false);
+		callbackEvictorConfigurator.setEnabled(true);
 
 		methodLoggerConfigurator= new MethodLoggerConfigurator(Person.class.getName());
 		methodLoggerConfigurator.setEnabled(true);
