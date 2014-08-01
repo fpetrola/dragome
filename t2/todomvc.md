@@ -62,7 +62,7 @@ Html template is just the same template provided by TodoMVC with some "data-temp
 		<link rel="stylesheet" href="bower_components/todomvc-common/base.css">
 		<link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="dragome/dragome.css">
-		script type="text/javascript" src="dragome/dragome.js"></script>
+		<script type="text/javascript" src="dragome/dragome.js"></script>
 	</head>
 	<body>
 		<section id="todoapp"> 
