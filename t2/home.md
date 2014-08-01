@@ -4,7 +4,7 @@ Based on bytecode to javascript compilation, you can execute applications writte
 You can use your favorite IDE, your favorite Java frameworks and tools because Dragome is totally transparent.  
 
 
-[Learn how to code Dragome apps in 5 minutes][4]
+[Learn how to code Dragome apps in 2 minutes][4]
 
 ----------
 
