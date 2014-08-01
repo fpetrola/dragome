@@ -1,6 +1,11 @@
 # TodoMVC in Dragome
 
-This is a contribution as a new framework choice for [TodoMVC project] (http://todomvc.com/).
+Dragome TodoMVC implementation is a new framework choice contribution for [TodoMVC project] (http://todomvc.com/).
+It was built using component builders, inside builders there are several tools involved to achieve the construction and binding:
+- Dragome visual componentes
+- Form bindings framework (based on [GWT Pectin](https://code.google.com/p/gwt-pectin/))
+- MethodLogger instrumentation for detecting getter and setter executions.
+
 
 
 ``` Java
