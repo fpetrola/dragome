@@ -9,4 +9,4 @@
 
 ## For professional support
 
-Send an email to: support@dragome.com
+Contact us by email: support@dragome.com
