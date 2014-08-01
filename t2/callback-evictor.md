@@ -110,7 +110,7 @@ public class EvictorConfigurator extends CallbackEvictorConfigurator implements 
 {
 	public ExamplesApplicationConfigurator()
 	{
-		continuationEnabled= false;
+		setEnabled(true);
 	}
 }
 ```
