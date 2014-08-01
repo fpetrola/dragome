@@ -21,7 +21,7 @@ If you want to configure both CallbackEvictor and MethodLogger at the same time 
 
 ``` Java
 @DragomeConfiguratorImplementor
-public class ExamplesApplicationConfigurator extends CompositeIntrumentationDragomeConfigurator
+public class ExamplesApplicationConfigurator extends ChainedInstrumentationDragomeConfigurator
 {
 	private CallbackEvictorConfigurator callbackEvictorConfigurator;
 	private MethodLoggerConfigurator methodLoggerConfigurator;
@@ -43,6 +43,9 @@ public class ExamplesApplicationConfigurator extends CompositeIntrumentationDrag
 	}
 }
 ```
+
+You can add bytecode instrumentation configurators using init method. This configurator will make a chain of instrumentations in the order you specify calling init method. Also you may specify from which configurator you take executionHandler so you can disable continuations from there for debugging purposes for example.
+
 
 
 ## For IDEs and Browsers
