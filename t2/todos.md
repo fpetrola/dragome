@@ -3,6 +3,8 @@
  - Integrate other JVM languages (JRuby, Jython, Closure, Groovy, Scala, etc)
      - Classloader implementation is required
      - JRE implementation percentage must be increased
+ - Increase Java 8 Stream API implementation percentage.
+ - Implement Java 8 Date Time API
  - Faster compile time
  - Create different js for each jar file
  - Custom serialization mechanism configuration
