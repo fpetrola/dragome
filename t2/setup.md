@@ -17,6 +17,7 @@ There are no text configuration files in Dragome, everything is managed by some 
 ##For configuring the entire application:
 
 
+If you want to configure both CallbackEvictor and MethodLogger at the same time you may use this kind of configuration:
 
 ``` Java
 @DragomeConfiguratorImplementor
@@ -39,11 +40,6 @@ public class ExamplesApplicationConfigurator extends CompositeIntrumentationDrag
     public ExecutionHandler getExecutionHandler()
     {
 	return callbackEvictorConfigurator.isEnabled() ? callbackEvictorConfigurator.getExecutionHandler() : super.getExecutionHandler();
-    }
-
-    public CompilerType getDefaultCompilerType()
-    {
-	return CompilerType.Standard;
     }
 }
 ```
