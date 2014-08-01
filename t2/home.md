@@ -38,7 +38,7 @@ You can use your favorite IDE, your favorite Java frameworks and tools because D
 * ... see more at [Features][5]
 
 
-Also see [Dragome Todos](todos.md) for more info about the future)
+Also see [Dragome Todos](todos.md) for more info about the future
 
 ----------
 
