@@ -7,11 +7,17 @@ There are no text configuration files in Dragome, everything is managed by some 
 ### Type of compiler at class level or method level
 @DragomeCompilerSettings(CompilerType.Strict|CompilerType.Standard)
 
-### Page alias (see [hello world example](helloworld-app.md) for more info)
+### Page alias 
+
 @PageAlias(alias= "{page-name}")
 
-### To specify which class implements a service interface (see [Services](services.md) for more info)
+see [hello world example](helloworld-app.md) for more info
+
+
+### To specify which class implements a service interface
+
 @ServiceImplementation(ConcreteServiceImpl.class)
+see [Services](services.md) for more info
 
 
 ##For configuring the entire application:
