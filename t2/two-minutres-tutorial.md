@@ -28,7 +28,7 @@ componentBuilder.bindTemplate("save-button").as(VisualButton.class).onClick(() -
 componentBuilder.bindTemplate("add-button").as(VisualButton.class).onClick(() -> persons.add(new Person())).build();
 ```
 
-Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.  
+Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML. For more info: [Template Engine](template-engine.md)   
 Then we repeat each element of persons list using "row" template, and creating one component for each property using binding capabilities.
 
 ``` Java
