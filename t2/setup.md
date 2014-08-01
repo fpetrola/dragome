@@ -10,21 +10,51 @@ There are no text configuration files in Dragome, everything is managed by some 
 ### Page alias (see [hello world example](helloworld-app.md) for more info)
 @PageAlias(alias= "{page-name}")
 
-### To specify which class implements a service interface
+### To specify which class implements a service interface (see [Services](services.md) for more info)
 @ServiceImplementation(ConcreteServiceImpl.class)
 
 
+##For configuring the entire application:
 
 
-DragomeConfigurator
-Callback evictor config
-Configuracion de serializador por servicio
+
+``` Java
+@DragomeConfiguratorImplementor
+public class ExamplesApplicationConfigurator extends CompositeIntrumentationDragomeConfigurator
+{
+    private CallbackEvictorConfigurator callbackEvictorConfigurator;
+    private MethodLoggerConfigurator methodLoggerConfigurator;
+
+    public ExamplesApplicationConfigurator()
+    {
+	callbackEvictorConfigurator= new CallbackEvictorConfigurator();
+	callbackEvictorConfigurator.setEnabled(false);
+
+	methodLoggerConfigurator= new MethodLoggerConfigurator(Person.class.getName());
+	methodLoggerConfigurator.setEnabled(true);
+
+	init(callbackEvictorConfigurator, methodLoggerConfigurator);
+    }
+
+    public ExecutionHandler getExecutionHandler()
+    {
+	return callbackEvictorConfigurator.isEnabled() ? callbackEvictorConfigurator.getExecutionHandler() : super.getExecutionHandler();
+    }
+
+    public CompilerType getDefaultCompilerType()
+    {
+	return CompilerType.Standard;
+    }
+}
+```
 
 
+## For IDEs and Browsers
+
+Debug capabilities are working only in Chrome browser at current version. Other browsers will be supported in near future.
 
 
 There is no installation required, neither browser or IDE plugin required.
-
 
 Avoiding these sad problems...
 
