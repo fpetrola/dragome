@@ -24,8 +24,8 @@ corresponding click listener to each one with lambda expressions.
 
 ``` Java
 ComponentBuilder<PersonCrudUsingBuilders> componentBuilder= new ComponentBuilder<PersonCrudUsingBuilders>(mainPanel, this);
-		componentBuilder.bindTemplate("save-button").as(VisualButton.class).onClick(() -> personService.savePersons(persons)).build();
-		componentBuilder.bindTemplate("add-button").as(VisualButton.class).onClick(() -> persons.add(new Person())).build();
+componentBuilder.bindTemplate("save-button").as(VisualButton.class).onClick(() -> personService.savePersons(persons)).build();
+componentBuilder.bindTemplate("add-button").as(VisualButton.class).onClick(() -> persons.add(new Person())).build();
 ```
 
 Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.  
