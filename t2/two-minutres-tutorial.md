@@ -19,6 +19,31 @@ A proxy to the service is obtained using a service factory (see [Services](servi
 PersonService personService= serviceFactory.createSyncService(PersonService.class);
 ```
 
+We have two static components which are save and add buttons, we will use a component builder for their creation. Attaching 
+corresponding click listener to each one with lambda expressions.
+
+``` Java
+ComponentBuilder<PersonCrudUsingBuilders> componentBuilder= new ComponentBuilder<PersonCrudUsingBuilders>(mainPanel, this);
+		componentBuilder.bindTemplate("save-button").as(VisualButton.class).onClick(() -> personService.savePersons(persons)).build();
+		componentBuilder.bindTemplate("add-button").as(VisualButton.class).onClick(() -> persons.add(new Person())).build();
+```
+
+Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.  
+Then we repeat each element of persons list using "row" template, and creating one component for each property using binding capabilities.
+
+``` Java
+componentBuilder.bindTemplate("row").as(VisualPanel.class).toList(persons).repeat((person, b) -> {
+			b.bindTemplate("givenName").as(VisualTextField.class).toProperty(Person::getGivenName, Person::setGivenName).build();
+			b.bindTemplate("surname").as(VisualTextField.class).toProperty(Person::getSurname, Person::setSurname).build();
+			b.bindTemplate("complete-name").as(VisualLabel.class).to(() -> person.getGivenName() + " " + person.getSurname()).build();
+			b.bindTemplate("nickname").to(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja"))).toProperty(Person::getNickname, Person::setNickname).build();
+			b.bindTemplate("delete-button").as(VisualButton.class).onClick(() -> persons.remove(person)).build();
+		});
+```
+
+**Ready!**
+
+This is the complete Java code:
 ``` Java
 public class PersonCrudUsingBuilders extends DragomeVisualActivity
 {
@@ -42,14 +67,6 @@ public class PersonCrudUsingBuilders extends DragomeVisualActivity
 	}
 }
 ```
-
-
-
-
-
-Note that mainTemplate is provided as member of DragomeVisualActivity which contains the body of current HTML.  
-FillTemplate method will be called for each item in persons list, and will be in charge of creating a component for each person field, binding all data, and creating the delete button.  
-
 
 HTML template:
 ``` HTML
