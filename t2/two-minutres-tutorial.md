@@ -33,12 +33,12 @@ Then we repeat each element of persons list using "row" template, and creating o
 
 ``` Java
 componentBuilder.bindTemplate("row").as(VisualPanel.class).toList(persons).repeat((person, b) -> {
-			b.bindTemplate("givenName").as(VisualTextField.class).toProperty(Person::getGivenName, Person::setGivenName).build();
-			b.bindTemplate("surname").as(VisualTextField.class).toProperty(Person::getSurname, Person::setSurname).build();
-			b.bindTemplate("complete-name").as(VisualLabel.class).to(() -> person.getGivenName() + " " + person.getSurname()).build();
-			b.bindTemplate("nickname").to(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja"))).toProperty(Person::getNickname, Person::setNickname).build();
-			b.bindTemplate("delete-button").as(VisualButton.class).onClick(() -> persons.remove(person)).build();
-		});
+    b.bindTemplate("givenName").as(VisualTextField.class).toProperty(Person::getGivenName, Person::setGivenName).build();
+	b.bindTemplate("surname").as(VisualTextField.class).toProperty(Person::getSurname, Person::setSurname).build();
+	b.bindTemplate("complete-name").as(VisualLabel.class).to(() -> person.getGivenName() + " " + person.getSurname()).build();
+	b.bindTemplate("nickname").to(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja"))).toProperty(Person::getNickname, Person::setNickname).build();
+	b.bindTemplate("delete-button").as(VisualButton.class).onClick(() -> persons.remove(person)).build();
+});
 ```
 
 **Ready!**
