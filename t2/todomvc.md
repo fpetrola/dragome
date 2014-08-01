@@ -60,12 +60,9 @@ Html template is just the same template provided by TodoMVC with some "data-temp
 		<meta http-equiv="Pragma" content="no-cache">
 		<title>Template • TodoMVC</title>
 		<link rel="stylesheet" href="bower_components/todomvc-common/base.css">
-		<!-- CSS overrides - remove if you don't need it -->
 		<link rel="stylesheet" href="css/app.css">
-		<script src="bower_components/todomvc-common/base.js"></script>
 		<link rel="stylesheet" href="dragome/dragome.css">
-		<!--script type="text/javascript" src="dragome/dragome.js"></script-->
-		<script type="text/javascript" src="dragome-resources/dragome-debug.js"></script>
+		script type="text/javascript" src="dragome/dragome.js"></script>
 	</head>
 	<body>
 		<section id="todoapp"> 
@@ -73,13 +70,10 @@ Html template is just the same template provided by TodoMVC with some "data-temp
 				<h1>todos</h1>
 				<input id="new-todo" data-template="new-todo" placeholder="What needs to be done?" autofocus>
 			</header>
-			<!-- This section should be hidden by default and shown when there are todos -->
 			<section id="main" data-template="main-section">
 				<input id="toggle-all" type="checkbox" data-template="toggle-all">
 				<label for="toggle-all">Mark all as complete</label>
 				<ul id="todo-list">
-					<!-- These are here just to show the structure of the list items -->
-					<!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
 					<li class="to-be-removed" data-template="completed-todo">
 						<div class="view">
 							<input  data-template="completed" class="toggle" type="checkbox" checked>
@@ -90,11 +84,8 @@ Html template is just the same template provided by TodoMVC with some "data-temp
 					</li>
 				</ul>
 			</section>
-			<!-- This footer should hidden by default and shown when there are todos -->
 			<footer id="footer" data-template="footer-section">
-				<!-- This should be `0 items left` by default -->
 				<span id="todo-count"><strong  data-template="items-count">1</strong> <span  data-template="items-label">item</span> left</span>
-				<!-- Remove this if you don't implement routing -->
 				<ul id="filters">
 					<li>
 						<a class="selected" href="#/" data-template="filter:/">All</a>
@@ -106,19 +97,14 @@ Html template is just the same template provided by TodoMVC with some "data-temp
 						<a href="#/completed" data-template="filter:/completed">Completed</a>
 					</li>
 				</ul>
-				<!-- Hidden if no completed items are left ↓ -->
 				<button id="clear-completed"  data-template="clear-completed">Clear completed (<span  data-template="clear-completed-number">item</span>)</button>
 			</footer>
 		</section>
 		<footer id="info">
 			<p>Double-click to edit a todo</p>
-			<!-- Remove the below line ↓ -->
-			<p>Template by <a href="http://github.com/sindresorhus">Sindre Sorhus</a></p>
-			<!-- Change this out with your name and url ↓ -->
 			<p>Created by <a href="http://www.dragome.com">Fernando Petrola</a></p>
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
-		<!-- Scripts here. Don't remove this ↓ -->
 		<script src="bower_components/todomvc-common/base.js"></script>
 		<script src="js/app.js"></script>
 	</body>
