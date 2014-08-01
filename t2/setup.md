@@ -23,24 +23,24 @@ If you want to configure both CallbackEvictor and MethodLogger at the same time 
 @DragomeConfiguratorImplementor
 public class ExamplesApplicationConfigurator extends CompositeIntrumentationDragomeConfigurator
 {
-    private CallbackEvictorConfigurator callbackEvictorConfigurator;
-    private MethodLoggerConfigurator methodLoggerConfigurator;
+	private CallbackEvictorConfigurator callbackEvictorConfigurator;
+	private MethodLoggerConfigurator methodLoggerConfigurator;
 
-    public ExamplesApplicationConfigurator()
-    {
-	callbackEvictorConfigurator= new CallbackEvictorConfigurator();
-	callbackEvictorConfigurator.setEnabled(false);
+	public ExamplesApplicationConfigurator()
+	{
+		callbackEvictorConfigurator= new CallbackEvictorConfigurator();
+		callbackEvictorConfigurator.setEnabled(false);
 
-	methodLoggerConfigurator= new MethodLoggerConfigurator(Person.class.getName());
-	methodLoggerConfigurator.setEnabled(true);
+		methodLoggerConfigurator= new MethodLoggerConfigurator(Person.class.getName());
+		methodLoggerConfigurator.setEnabled(true);
 
-	init(callbackEvictorConfigurator, methodLoggerConfigurator);
-    }
+		init(callbackEvictorConfigurator, methodLoggerConfigurator);
+	}
 
-    public ExecutionHandler getExecutionHandler()
-    {
-	return callbackEvictorConfigurator.isEnabled() ? callbackEvictorConfigurator.getExecutionHandler() : super.getExecutionHandler();
-    }
+	public ExecutionHandler getExecutionHandler()
+	{
+		return callbackEvictorConfigurator.isEnabled() ? callbackEvictorConfigurator.getExecutionHandler() : super.getExecutionHandler();
+	}
 }
 ```
 
