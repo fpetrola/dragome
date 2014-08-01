@@ -60,11 +60,9 @@ panel.addChild(textfield);
 
 ###Binding a textfield
 
-Using ModelBinder:
+Using Builders:
 ``` Java
-VisualTextFieldImpl<String> textField= new VisualTextFieldImpl<String>("name");
-ModelBinder<Person> binder= new ModelBinder<Person>(person);
-binder.bindMemberToValueHolder("name", textField, String.class);
+componentBuilder.bindTemplate("givenName").as(VisualTextField.class).toProperty(Person::getGivenName, Person::setGivenName).build();
 ```
 
 Using Pectin:
@@ -78,12 +76,9 @@ binder.bind(nameFieldModel).to(textField);
 
 ###Binding a list
 
-Using ModelBinder:
+Using Builders:
 ``` Java
-VisualListBox<Wine> wineListBox= new VisualListBoxImpl<Wine>("wines", Arrays.asList(Wine.CAB_SAV, Wine.MERLOT, Wine.SHIRAZ));
-wineListBox.setMultipleItems(true);
-wineListBox.setListModel(new ArrayListModel<Wine>(Wine.MERLOT, Wine.SHIRAZ));
-binder.bindListMemberToHasListModel("favoriteWines", wineListBox, Wine.class);
+componentBuilder.bindTemplate("nickname").to(new VisualComboBoxImpl<String>("nickname", Arrays.asList("Pelusa", "Burrito", "Bocha", "Bruja"))).toProperty(Person::getNickname, Person::setNickname).build();
 ```
 
 ###Binding a formatted age field
