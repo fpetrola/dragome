@@ -1,3 +1,8 @@
+# TodoMVC in Dragome
+
+This is a contribution as a new framework choice for [TodoMVC project] (http://todomvc.com/).
+
+
 ``` Java
 public class TodosPage extends DragomeVisualActivity
 {
