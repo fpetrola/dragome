@@ -5,5 +5,5 @@ There are no text configuration files in Dragome, everything is managed by some 
 ##Available annotations:
 
 ### Type of compiler at class level or method level
-@DragomeCompilerSettings(CompilerType.Strict|CompilerType.Standard)
+@DragomeCompilerSettings(CompilerType.Strict CompilerType.Standard)
 
