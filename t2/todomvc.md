@@ -48,6 +48,7 @@ public class TodosPage extends DragomeVisualActivity
 }
 ```
 
+Html template is just the same template provided by TodoMVC with some "data-template" attributes added for identifying templates parts. It's completly logicless and has the mentioned minimal changes over the original file, which makes it interchangeable using the same logic over any of them because logic is stored in java file. 
 
 
 ``` HTML
