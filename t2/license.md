@@ -9,7 +9,7 @@ The exact terms of this license can be found in the "dragome-LICENSE.txt" file.
 
 For all 3rd party libraries facilitated by Dragome their individual licenses apply. These can be found in the "3rdparty-LICENSE" folder.
 
-``` text
+``` sh
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
