@@ -57,7 +57,7 @@ mvn archetype:generate -DarchetypeGroupId=com.dragome -DarchetypeArtifactId=simp
 
 ###How to setup
 
-[Setup your application](setup.md)
+[Setup your application](app-setup.md)
 
 ----------
 
