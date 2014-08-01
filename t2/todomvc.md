@@ -52,7 +52,6 @@ Html template is just the same template provided by TodoMVC with some "data-temp
 
 
 ``` HTML
-<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
